@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html>
+ 
+<head>
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <base target="_blank">
+  
+  <title>Debayan Gupta - Academic webpage</title>
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+
+  <script src="https://code.jquery.com/jquery-2.1.3.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+  
+  <style type="text/css">
+
+body {
+	font-family:"Times New Roman", Times, serif;
+	font-size:16px; margin:0;padding:0;
+}
+a {outline:0!important}
+.name {font-size: 32px;margin-top: 7px;}
+nav a {color: #999}
+
+li {margin:10px 0px;}
+li p {margin:0px;}
+li p:first-child {font-weight:bold}
+li p:first-child span {font-weight:normal}
+ol li>a {font-style:italic}
+
+section {padding: 70px 0px}
+
+.bg {
+	background:fixed;background-position:bottom;background-size:cover;
+	height:50vh;padding:1px 0px;
+}
+.bg>h2 {
+	text-shadow:0 0 10px black, 0 0 2px black;color:#FFF;
+	font-size:70px;margin-top:20vh;text-align:center;
+}
+#index {background-image:url('1.jpg');}
+#teaching {background-image:url('2.jpg');}
+#current {background-image:url('3.jpg');}
+#publications {background-image:url('4.jpg');}
+#other {background-image:url('5.jpg');}
+
+#contact-links img {height:60px;border-radius:10px;background-color:black;}
+#contact-links a {-webkit-filter: grayscale(100%); filter: grayscale(100%);}
+#contact-links a:hover {-webkit-filter: grayscale(0%); filter: grayscale(0%);}
+
+.box {
+  display:inline-block;
+  width:230px;font-size:14px;
+  margin:18px;padding:10px;
+  vertical-align:top;
+  text-align: center;
+  text-decoration: none!important;
+}
+.box>img {max-height:150px;max-width:230px;}
+.box>h3 {font-size: 21px;color: black}
+.box p {text-align:justify}
+	</style>
+	<script type="text/javascript">
+$(function() {
+	$("#navnav a[href^='#']").on('click', function(e) {
+
+		e.preventDefault();
+		var hash = this.hash;
+
+		$('html, body').animate({scrollTop: $(hash).offset().top}, 900, function(){
+			window.location.hash = hash;
+		});
+
+	});
+});
+	</script>
+</head> 
+
+<body data-offset="65" data-spy="scroll" data-target=".main-spy">
+
+<nav class="main-spy navbar navbar-default navbar-fixed-top navbar-inverse">
+<div class="container">
+
+	<div class="navbar-header"><a target="_self" class="navbar-brand name" href="#">Debayan Gupta</a></div>
+
+	<ul id="navnav" class="nav nav-pills pull-right">
+		<li><a target="_self" href="#index">Home</a></li>
+		<li><a target="_self" href="#teaching">Teaching</a></li>
+		<li><a target="_self" href="#current">Work in Progress</a></li>
+		<li><a target="_self" href="#publications">Publications</a></li>
+		<li><a target="_self" href="#other">Other Work</a></li>
+		<li role="presentation" class="dropdown">
+			<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-expanded="false">
+				debayangupta.com <span class="caret"></span>
+			</a>
+			<ul class="dropdown-menu" role="menu">
+				<li><a href="http://debayangupta.com">Home</a></li>
+				<li><a href="http://debayangupta.com/personal.htm">Personal</a></li>
+				<li><a href="http://debayangupta.com/contact.htm">Contact</a></li>
+				<li><a href="http://debayangupta.com/CV.pdf">CV</a></li>
+			</ul>
+		</li>
+	</ul>
+
+</div>
+</nav>
+
+<!-- Page index -->
+<div id="index" class="bg">
+	<h2 id="contact-links">
+		<a target="_blank" href="https://www.facebook.com/debayan.gupta"><img alt="Facebook" src="http://static.debayangupta.com/icons/fb.png"></a>
+		<a target="_blank" href="https://www.linkedin.com/in/debayang"><img alt="LinkedIn" src="http://static.debayangupta.com/icons/in.png"></a>
+		<a target="_blank" href="mailto:debayan@debayangupta.com"><img alt="Email" src="http://static.debayangupta.com/icons/email.png"></a>
+		<a target="_blank" href="http://debayangupta.com/CV.pdf"><img alt="CV" src="http://static.debayangupta.com/icons/cv.png"></a>
+	</h2>
+</div>
+<section class="container">
+<p class="lead">I'm a 5th year PhD student in the 
+	<a target="_blank" href="http://cpsc.yale.edu/">Department of Computer Science</a> at 
+	<a target="_blank" href="http://www.yale.edu/">Yale University</a>. My advisor is 
+	<a target="_blank" href="http://www.cs.yale.edu/homes/jf/">Joan Feigenbaum</a>.</p>
+<p>I'm interested in secure computation and its applications to various real-world problems.
+Before coming to Yale, I completed a BSc in Computer Science from St. Xavier's College, under Calcutta University.
+Take a look at my <a href="http://debayangupta.com/CV.pdf">CV</a> for more details. My contact details are available <a href="http://debayangupta.com/contact.htm">here</a>.</p>
+
+<a target="_blank" href="http://www.yale.edu/" class="box" title="Yale University">
+	<img alt="Yale University" src="http://static.debayangupta.com/icons/yale.png">
+	<h3>Yale University</h3>
+</a>
+
+<a target="_blank" href="http://seas.yale.edu/" class="box" title="Yale School of Engineering &amp; Applied Science">
+	<img alt="Yale School of Engineering &amp; Applied Science" src="http://static.debayangupta.com/icons/seas.png">
+	<h3>Yale Engineering</h3>
+</a>
+
+<a target="_blank" href="http://www.caluniv.ac.in/" class="box" title="Calcutta University">
+	<img alt="Calcutta University" src="http://static.debayangupta.com/icons/calcutta.png">
+	<h3>University of Calcutta</h3>
+</a>
+
+<a target="_blank" href="http://sxccal.edu/" class="box" title="St. Xavier's College, Kolkata">
+	<img alt="St. Xavier's College" src="http://static.debayangupta.com/icons/xaviers.png">
+	<h3>St. Xavier's College</h3>
+</a>
+
+<a target="_blank" href="http://www.vencorelabs.com/" class="box" title="Vencore Labs">
+	<img alt="Vencore Labs" src="http://static.debayangupta.com/icons/vencore.png">
+	<h3>Vencore Labs</h3>
+</a>
+
+<a target="_blank" href="http://www.pwc.com/" class="box" title="PriceWaterhouseCoopers">
+	<img alt="PriceWaterhouseCoopers" src="http://static.debayangupta.com/icons/pwc.png">
+	<h3>PriceWaterhouseCoopers</h3>
+</a>
+
+</section>
+
+<!-- Teaching -->
+<div id="teaching" class="bg"><h2>Teaching</h2></div>
+<section class="container">
+<p>As a graduate student at Yale, I won the 
+	<a href="http://cpsc.yale.edu/news/congratulations-winners-yale-computer-science-dept-teaching-awards-2014-2015-academic-year">2015 Best Teaching Fellow Award for Computer Science</a>. 
+	I've helped teach the following courses:</p>
+<table class="table table-striped">
+<thead>
+	<tr>
+		<th>Period</th>
+		<th>Course Code</th>
+		<th>Course Title</th>
+		<th>Instructor</th>
+		<th>Capacity</th>
+	</tr>
+</thead>
+<tbody>
+
+	<tr>
+		<td>Fall 2015</td>
+		<td><a href="http://zoo.cs.yale.edu/classes/cs437/">CPSC 437/537</a></td>
+		<td>Database Systems</td>
+		<td><a href="http://codex.cs.yale.edu/avi/">Avi Silberschatz</a></td>
+		<td>Teaching Fellow</td>
+	</tr>
+
+	<tr>
+		<td>Spring 2015</td>
+		<td><a href="http://zoo.cs.yale.edu/classes/cs468/">CPSC 468/568</a></td>
+		<td>Computational Complexity</td>
+		<td><a href="http://www.cs.yale.edu/homes/jf/">Joan Feigenbaum</a></td>
+		<td>Teaching Fellow</td>
+	</tr>
+
+	<tr>
+		<td>Fall 2014</td>
+		<td><a href="http://zoo.cs.yale.edu/classes/cs323/">CPSC 323</a></td>
+		<td>Introduction to Systems Programming and Computer Organization</td>
+		<td><a href="http://sce.cs.yale.edu/">Stan Eisenstat</a></td>
+		<td>Teaching Fellow</td>
+	</tr>
+
+	<tr>
+		<td>Spring 2014</td>
+		<td><a href="http://zoo.cs.yale.edu/classes/cs437/">CPSC 437/537</a></td>
+		<td>Database Systems</td>
+		<td><a href="http://codex.cs.yale.edu/avi/">Avi Silberschatz</a></td>
+		<td>Teaching Fellow</td>
+	</tr>
+
+	<tr>
+		<td>Spring 2014</td>
+		<td><a href="http://zoo.cs.yale.edu/classes/cs112/">CPSC 112</a></td>
+		<td>Introduction to Programming</td>
+		<td><a href="http://www.cs.yale.edu/homes/yry/">Yang (Richard) Yang</a></td>
+		<td>-</td>
+	</tr>
+
+	<tr>
+		<td>Fall 2013</td>
+		<td><a href="http://zoo.cs.yale.edu/classes/cs423/">CPSC 423/523</a></td>
+		<td>Principles of Operating Systems</td>
+		<td><a href="http://codex.cs.yale.edu/avi/">Avi Silberschatz</a></td>
+		<td>Teaching Fellow</td>
+	</tr>
+
+	<tr>
+		<td>Spring 2013</td>
+		<td><a href="http://zoo.cs.yale.edu/classes/cs437/">CPSC 437/537</a></td>
+		<td>Database Systems</td>
+		<td><a href="http://codex.cs.yale.edu/avi/">Avi Silberschatz</a></td>
+		<td>-</td>
+	</tr>
+
+	<tr>
+		<td>Spring 2013</td>
+		<td><a href="http://zoo.cs.yale.edu/classes/cs112/">CPSC 112</a></td>
+		<td>Introduction to Programming</td>
+		<td><a href="http://www.cs.yale.edu/homes/yry/">Yang (Richard) Yang</a></td>
+		<td>Teaching Fellow</td>
+	</tr>
+
+	<tr>
+		<td>Fall 2012</td>
+		<td><a href="http://zoo.cs.yale.edu/classes/cs202/index.html">CPSC 202</a></td>
+		<td>Mathematical Tools for Computer Science</td>
+		<td><a href="http://www.cs.yale.edu/homes/jf/">Joan Feigenbaum</a></td>
+		<td>Teaching Fellow</td>
+	</tr>
+	
+	<tr>
+		<td>Spring 2012</td>
+		<td><a href="http://pine.cs.yale.edu/pinewiki/CS223">CPSC 223</a></td>
+		<td>Data Structures and Programming Techniques</td>
+		<td><a href="http://cs-www.cs.yale.edu/homes/aspnes/">James Aspnes</a></td>
+		<td>Teaching Fellow</td>
+	</tr>
+	
+	<tr>
+		<td>Fall 2011</td>
+		<td><a href="http://zoo.cs.yale.edu/classes/cs437/">CPSC 437/537</a></td>
+		<td>Database Systems</td>
+		<td><a href="http://codex.cs.yale.edu/avi/">Avi Silberschatz</a></td>
+		<td>Teaching Fellow</td>
+	</tr>
+	
+	<tr>
+		<td>Spring 2011</td>
+		<td><a href="http://zoo.cs.yale.edu/classes/cs201/">CPSC 201</a></td>
+		<td>Introduction to Computer Science</td>
+		<td><a href="http://cpsc.yale.edu/people/holly-rushmeier">Holly Rushmeier</a></td>
+		<td>Teaching Fellow</td>
+	</tr>
+</tbody>
+</table>
+</section>
+
+<!-- Current Work -->
+<div id="current" class="bg"><h2>Work in Progress</h2></div>
+<section class="container">
+<ul>
+	<li>
+		<p>Secure Stable Matching</p>
+		<p>Ben Terner, Debayan Gupta, abhi shelat, and Joan Feigenbaum</p>
+	</li>
+	
+	<li>
+		<p>Partial Garbled Circuits (improvements and proofs)</p>
+		<p>Benjamin Mood, Debayan Gupta, Kevin Butler, and Joan Feigenbaum</p>
+	</li>
+
+	<li>
+		<p>PERFECT GC: Protocols Engineered for Repeated Function Evaluations and Compact Transmissions of Garbled Circuits</p>
+		<p>Debayan Gupta, Benjamin Mood, Michael Hopkins and Joan Feigenbaum</p>
+	</li>
+
+	<li>
+		<p>Using Intel Software Guard Extensions for Efficient Two-Party Secure Function Evaluation (in submission)</p>
+		<p>Debayan Gupta, Benjamin Mood, Kevin Butler, and Joan Feigenbaum</p>
+	</li>
+	
+	<li>
+		<p>Enforcing Policies on Range Queries in Encrypted Databases</p>
+		<p>Jason Perry, Debayan Gupta, Giovanni Di Crescenzo, and Joan Feigenbaum</p>
+	</li>
+</ul>
+</section>
+
+<!-- Publications -->
+<div id="publications" class="bg"><h2>Publications</h2></div>
+<section class="container">
+<ol reversed>
+	<li>
+		<p>Frigate: A Validated, Extensible, and Efficient Compiler and Interpreter for Secure Computation <span>[<a href="papers/eurosp16.pdf">PDF-draft</a>]</span></p>
+		<a href="http://www.ieee-security.org/TC/EuroSP2016/">Proceedings of the 1st IEEE European Symposium on Security and Privacy, 2016</a>
+		<p>Benjamin Mood, Debayan Gupta, Henry Carter, Kevin Butler, and Patrick Traynor</p>
+	</li>
+
+	<li>
+		<p>Reuse It Or Lose It: More Efficient Secure Computation Through Reuse of Encrypted Values <span>[<a href="papers/MGBF-ccs14.pdf">PDF</a>]</span></p>
+		<a href="http://www.sigsac.org/ccs/CCS2014/index.html">Proceedings of the 21st ACM Conference on Computer and Communications Security, 2014</a>
+		<p>Benjamin Mood, Debayan Gupta, Kevin Butler, and Joan Feigenbaum</p>
+	</li>
+	
+	<li>
+    <p>Systematizing Secure Computation for Research and Decision Support <span>[<a href="papers/PGFW-Systematizing-SCN2014.pdf">PDF</a>]</span></p>
+    <a href="http://scn.dia.unisa.it/">Proceedings of the 9th Conference on Security and Cryptography for Networks, 2014</a>
+    <p>Jason Perry, Debayan Gupta, Joan Feigenbaum, and Rebecca N. Wright</p>
+	</li>
+	
+	<li>
+  	<p>Practical and Privacy-Preserving Policy Compliance for Outsourced Data <span>[<a href="papers/fc14wahc.pdf">PDF</a>]</span></p>
+  	<a href="https://www.dcsec.uni-hannover.de/4556.html">Proceedings of the 2014 Workshop on Applied Homomorphic Cryptography, Financial Cryptography and Data Security 2014</a>
+  	<p>Giovanni Di Crescenzo, Joan Feigenbaum, Debayan Gupta, Euthimios Panagos, Jason Perry, and Rebecca N. Wright</p>
+	</li>
+	
+	<li>
+  	<p>A New Approach to Interdomain Routing Based on Secure Multi-Party Computation <span>[<a href="papers/HotNets12.pdf">PDF</a>]</span></p>
+  	<a href="http://conferences.sigcomm.org/hotnets/2012/program.shtml">Proceedings of HotNets XI, 2012</a>
+  	<p>Debayan Gupta, Aaron Segal, Aurojit Panda, Gil Segev, Michael Schapira, Joan Feigenbaum, Jennifer Rexford, and Scott Shenker</p>
+	</li>
+</ol>
+</section>
+
+<!-- Other -->
+<div id="other" class="bg"><h2>Other Work</h2></div>
+<section class="container">
+<ol reversed>
+	<li>
+		<p>Sync / Blackbox:  USB firmware for automated actions (Nov 2011 - May 2013) <span>[private]</span></p>
+		<p>Debayan Gupta, <a href="http://debdipto.com">Debdipto Ghoshal</a> (under <a href="http://codex.cs.yale.edu/avi/">Avi Silberschatz</a>)</p>
+	</li>
+	
+	<li>
+		<p>Visual Query System: An intuitive database query system as powerful as SQL<span>[partial; <a href="http://github.com/debayangupta/VQS">github</a>]</span></p>
+		<p><a href="http://nyuad.nyu.edu/academics/faculty/azza-abouzied.html">Azza Abouzeid</a> and Debayan Gupta (under <a href="http://codex.cs.yale.edu/avi/">Avi Silberschatz</a>)</p>
+	</li>
+	
+	<li>
+		<p>Smooth Moves: Effects of motion on human perception of robots <span>[<a href="smooth/">webpage</a>]</span></p>
+		<p><a target="_blank" href="http://www.ian-bullock.com/">Ian Bullock</a>, Debayan Gupta, and Fei Huang (under 
+			<a href="http://cs-www.cs.yale.edu/homes/scaz/">Brian Scassellati</a>, for CPSC 573, Spring 2011)</p>
+	</li>
+	
+	<li>
+  	<p>IP-version agnostic C++ Library for Socket Programming <span>[<a href="socketLib/">webpage</a>]</span></p>
+  	<p>Debayan Gupta (under <a href="http://cs-www.cs.yale.edu/homes/fischer/">Michael Fischer</a>, for CPSC 527, Fall 2010)</p>
+  </li>
+
+	<li>
+  	<p>Bachelor's Thesis - Applications of Chaos in Computation: Fractal imaging</p>
+  	<p>Debayan Gupta (under Sonali Sen, July 2008 to May 2009)</p>
+  </li>
+
+	<li>
+		<p>High Precision Mathematical Operations: Storing and Manipulating Very Large Numbers</p>
+		<p>Debayan Gupta (under Asoke Nath, Sep 2006 to May 2007)</p>
+	</li>
+	
+</ol>
+</section>
+
+</body> 
+ 
+</html> 
+ 
+<!-- Debayan Gupta -->
