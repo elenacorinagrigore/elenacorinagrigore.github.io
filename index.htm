@@ -20,11 +20,15 @@
 body {
 	font-family:"Times New Roman", Times, serif;
 	font-size:16px; margin:0;padding:0;
-	padding-top:40px;
 }
+.u {text-decoration: underline}
 a {outline:0!important}
 .name {font-size: 32px;margin-top: 7px;}
-nav a {color: #999}
+nav a {color: #999;}
+
+a .fname {color:#777;}
+a .aname {color:#CCC;}
+a:hover .fname, a:hover .aname {color: white;text-shadow:0 0 3px white;}
 
 li {margin:10px 0px;}
 li p {margin:0px;}
@@ -33,7 +37,7 @@ li p:first-child span {font-weight:normal}
 ol li>a {font-style:italic}
 
 section {padding: 70px 0px}
-
+.equalizer {display:flex;justify-content:space-between;}
 .bg {
 	background:fixed;background-position:bottom;background-size:cover;
 	height:30vh;padding:0px;
@@ -56,13 +60,13 @@ section {padding: 70px 0px}
 
 .box {
   display:inline-block;
-  width:230px;font-size:14px;
-  margin:18px;padding:10px;
+  width:120px;font-size:14px;
+  margin:18px;
   vertical-align:top;
   text-align: center;
   text-decoration: none!important;
 }
-.box>img {max-height:150px;max-width:230px;}
+.box>img {max-height:100px;max-width:120px;}
 .box>h3 {font-size: 21px;color: black}
 .box p {text-align:justify}
 	</style>
@@ -87,7 +91,9 @@ $(function() {
 <nav class="main-spy navbar navbar-default navbar-fixed-top navbar-inverse">
 <div class="container">
 
-	<div class="navbar-header"><a target="_self" class="navbar-brand name" href="#">Elena Corina Grigore</a></div>
+	<div class="navbar-header"><a target="_self" class="navbar-brand name" href="#">
+		<span class="fname">Elena</span> <span class="aname">Corina Grigore</span>
+	</a></div>
 
 	<ul id="navnav" class="nav nav-pills pull-right">
 		<li><a target="_self" href="#index">Home</a></li>
@@ -116,11 +122,12 @@ $(function() {
 	<a target="_blank" href="http://cpsc.yale.edu/">Department of Computer Science</a> at 
 	<a target="_blank" href="http://www.yale.edu/">Yale University</a>. My advisor is 
 	<a target="_blank" href="http://www.cs.yale.edu/homes/scaz/">Brian Scassellati</a>.</p>
-<p>I'm interested in backpacks and fruit.
-Before coming to Yale, I completed blah.
+<p>I'm interested in Asian-American men, Macy's products, and fruit-stuffed backpacks.
+Before coming to Yale, I completed a Master of Engineering from the <a target="_blank" href="http://www.bristol.ac.uk/">University of Bristol</a>.
 Take a look at my <a href="CV.pdf">CV</a> for more details.</p>
 
-<a target="_blank" href="http://www.yale.edu/" class="box" title="Yale University">
+<div class="equalizer">
+<a target="_blank" href="http://www.yale.edu/" class="box" title="Yale University" style="margin-left:0">
 	<img alt="Yale University" src="logo/yale.png">
 	<h3>Yale University</h3>
 </a>
@@ -139,13 +146,14 @@ Take a look at my <a href="CV.pdf">CV</a> for more details.</p>
 	<img alt="University of California, San Diego" src="logo/ucsd.png">
 	<h3>University of California, San Diego</h3>
 </a>
+</div>
 
 </section>
 
 <!-- Research Interests -->
 <div id="interests" class="bg"><h2>Research Interests</h2></div>
 <section class="container">
-Text
+Robotics, machine learning, artificial intelligence, human-robot interaction, human-robot teaming, adaptive systems, policy search, reinforcement learning, user modeling.
 </section>
 
 
@@ -154,17 +162,61 @@ Text
 <section class="container">
 <ol reversed>
 	<li>
-		<p>Frigate: A Validated, Extensible, and Efficient Compiler and Interpreter for Secure Computation <span>[<a href="papers/eurosp16.pdf">PDF-draft</a>]</span></p>
-		<a href="http://www.ieee-security.org/TC/EuroSP2016/">Proceedings of the 1st IEEE European Symposium on Security and Privacy, 2016</a>
-		<p>Benjamin Mood, Debayan Gupta, Henry Carter, Kevin Butler, and Patrick Traynor</p>
+		<p>Modeling Motivational States in Adaptive Robot Companions <span>[<a href="#">PDF</a>]</span></p>
+		<a href="#">2015 AAAI Fall Symposium Series</a>
+		<p><span class="u">Grigore EC</span>, Pereira A, Scassellati B.</p>
 	</li>
+
+	<li>
+		<p>Modeling Motivational States through Interpreting Physical Activity Data for Adaptive Robot Companions <span>[<a href="#">PDF</a>]</span></p>
+		<a href="#">Proceedings of the International Conference on User Modeling, Adaptation and Personalization (UMAP) 2015</a>
+		<p><span class="u">Grigore EC</span></p>
+	</li>
+
+	<li>
+		<p>Modeling Behavior through Interpreting Physical Activity Data for Adaptive Human-Robot Interaction Systems <span>[<a href="#">PDF</a>]</span></p>
+		<a href="#">Proceedings of the Human-Robot Teaming Workshop at the International Conference on Human-Robot Interaction (HRI) 2015</a>
+		<p><span class="u">Grigore EC</span>, Scassellati B</p>
+	</li>
+
+	<li>
+		<p>A Developmentally Inspired Transfer Learning Approach for Predicting Skill Durations <span>[<a href="#">PDF</a>]</span></p>
+		<a href="#">Proceedings of the 4th joint IEEE International Conference on Development and Learning and on Epigenetic Robotics (ICDL-EPIROB) 2014</a>
+		<p>Hayes B, <span class="u">Grigore EC</span>, Litoiu A, Ramachandran A, Scassellati B</p>
+	</li>
+
+	<li>
+		<p>How to Train Your DragonBot: Socially Assistive Robots for Teaching Children About Nutrition Through Play <span>[<a href="#">PDF</a>]</span></p>
+		<a href="#">Robot and Human Interactive Communication, 2014 (ROMAN) 2014</a>
+		<p>Short E, Swift-Spong K, Greczek J, Ramachandran A, Litoiu A, <span class="u">Grigore EC</span>, Feil-Seifer D, Shuster S, Lee JJ, Huang S, Levonisova S, Litz S, Li J, Ragusa G, Spruijt-Metz D, Mataric MJ, Scassellati, B</p>
+	</li>
+
+	<li>
+		<p>Feasibility of SAR Approaches - Helping Children with Learning Tasks <span>[<a href="#">PDF</a>]</span></p>
+		<a href="#">International Workshop on Developmental Social Robotics (DevSor):<br> Reasoning about Human, Perspective, Affordances and Effort for Socially Situated Robots</a>
+		<p><span class="u">Grigore EC</span>, Scassellati B</p>
+	</li>
+
+	<li>
+		<p>Joint Action Understanding Improves Robot-to-Human Object Handover <span>[<a href="#">PDF</a>]</span></p>
+		<a href="#">IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS) 2013</a>
+		<p><span class="u">Grigore EC</span>, Eder K, Pipe AG, Melhuish C, Leonards U</p>
+	</li>
+
+	<li>
+		<p>Towards Safe Human-Robot Interaction <span>[<a href="#">PDF</a>]</span></p>
+		<a href="#">In:Towards Autonomous Robotic Systems (TAROS) 2011</a>
+		<p><span class="u">Grigore EC</span>, Kerstin E, Alexander L, Sergey S, Anthony GP, Chris M</p>
+	</li>
+
 </ol>
+
 </section>
 
 <!-- Teaching -->
 <div id="teaching" class="bg"><h2>Teaching</h2></div>
 <section class="container">
-<p>As a graduate student at Yale, I have helped teach the following courses:</p>
+<p>As a graduate student at Yale, I have assisted in teaching the following courses:</p>
 <table class="table table-striped">
 <thead>
 	<tr>
@@ -179,40 +231,55 @@ Text
 
 	<tr>
 		<td>Fall 2015</td>
-		<td><a href="http://zoo.cs.yale.edu/classes/cs437/">CPSC 437/537</a></td>
-		<td>Database Systems</td>
-		<td><a href="http://codex.cs.yale.edu/avi/">Avi Silberschatz</a></td>
+		<td><a href="http://zoo.cs.yale.edu/classes/cs202/">CPSC 437/537</a></td>
+		<td>Mathematical Tools for Computer Science</td>
+		<td><a href="http://cpsc.yale.edu/people/dana-angluin">Dana Angluin</a></td>
 		<td>Teaching Fellow</td>
 	</tr>
 
 	<tr>
 		<td>Spring 2015</td>
-		<td><a href="http://zoo.cs.yale.edu/classes/cs468/">CPSC 468/568</a></td>
-		<td>Computational Complexity</td>
-		<td><a href="http://www.cs.yale.edu/homes/jf/">Joan Feigenbaum</a></td>
+		<td><a href="http://zoo.cs.yale.edu/classes/cs468/">CPSC 473/573</a></td>
+		<td>Intelligent Robotics</td>
+		<td><a target="_blank" href="http://www.cs.yale.edu/homes/scaz/">Brian Scassellati</a></td>
+		<td>Teaching Fellow</td>
+	</tr>
+
+	<tr>
+		<td>Spring 2013</td>
+		<td><a href="http://zoo.cs.yale.edu/classes/cs468/">CPSC 472/572</a></td>
+		<td>Intelligent Robotics Lab</td>
+		<td><a target="_blank" href="http://www.cs.yale.edu/homes/scaz/">Brian Scassellati</a></td>
 		<td>Teaching Fellow</td>
 	</tr>
 
 </tbody>
 </table>
+
+<p>Other teaching and mentoring:</p>
+<ul>
+	<li>Mentored five undergraduate students and a high-school student on research projects (2013-2015)</li>
+	<li>Students Associates Scheme - Mathematics student-teacher at Sydney Stringer school, UK (2013)</li>
+</ul>
+
 </section>
 
 <!-- Outreach -->
 <div id="outreach" class="bg"><h2>Outreach</h2></div>
 <section class="container">
-Text
+Outreach text goes here.
 </section>
 
 <!-- Skills -->
 <div id="skills" class="bg"><h2>Skills</h2></div>
 <section class="container">
-Text
+Skills go here.
 </section>
 
 <!-- Personal -->
 <div id="personal" class="bg"><h2>Personal</h2></div>
 <section class="container">
-Text
+Personal things here.
 </section>
 
 </body> 
