@@ -22,6 +22,7 @@ body {
 	font-size:16px; margin:0;padding:0;
 }
 .u {text-decoration: underline}
+.center {text-align: center}
 a {outline:0!important}
 .name {font-size: 32px;margin-top: 7px;}
 nav a {color: #999;}
@@ -69,6 +70,27 @@ section {padding: 70px 0px}
 .box>img {max-height:100px;max-width:120px;}
 .box>h3 {font-size: 21px;color: black}
 .box p {text-align:justify}
+
+/* Skills */
+.skills {
+	display: inline-block;
+	height: 140px; width: 140px;
+	margin: 20px;
+	background: rgba(0,0,0,0.5);
+}
+.type {
+	display: inline-block;
+	border: 1px black solid;
+	padding:5px 7px;
+	cursor: pointer;
+	margin: 10px;
+	background: black;
+	color: white!important;
+	border:3px white solid;
+}
+.type:hover {text-decoration: none; border-color:black;}
+
+
 	</style>
 	<script type="text/javascript">
 $(function() {
@@ -82,6 +104,15 @@ $(function() {
 		});
 
 	});
+
+	$(".type").mouseover(function() {
+		$(".skills").css("opacity", 0.2); 
+		$("."+$(this).attr('id')).css("opacity", 1);
+
+	}).mouseleave(function() { 
+		$(".skills").css("opacity", 1); 
+	});
+
 });
 	</script>
 </head> 
@@ -273,7 +304,32 @@ Outreach text goes here.
 <!-- Skills -->
 <div id="skills" class="bg"><h2>Skills</h2></div>
 <section class="container">
-Skills go here.
+
+	<div id="skill-box">
+		<div class="equalizer">
+			<div id="item1" class="skills skill-pl">Item 1</div>
+			<div id="item2" class="skills skill-sw skill-rp">Item 2</div>
+			<div id="item3" class="skills skill-rp">Item 3</div>
+			<div id="item4" class="skills skill-pl skill-sw">Item 4</div>
+			<div id="item5" class="skills skill-sw">Item 5</div>
+			<div id="item6" class="skills skill-pl">Item 6</div>
+		</div>
+		<div class="equalizer">
+			<div id="item7" class="skills skill-sw skill-rp">Item 7</div>
+			<div id="item8" class="skills skill-rp">Item 8</div>
+			<div id="item9" class="skills skill-pl skill-sw">Item 9</div>
+			<div id="item10" class="skills skill-sw">Item 10</div>
+			<div id="item11" class="skills skill-pl">Item 11</div>
+			<div id="item12" class="skills skill-pl skill-sw">Item 12</div>
+		</div>
+	</div>
+
+	<div id="skill-types" class="center">
+		<a class="type" id="skill-pl">Programming Languages</a>
+		<a class="type" id="skill-sw">Software / IDEs</a>
+		<a class="type" id="skill-rp">Robotics Platforms</a>
+	</div>
+
 </section>
 
 <!-- Personal -->
