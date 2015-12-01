@@ -25,7 +25,14 @@ body {
 .u {text-decoration: underline}
 .b {font-weight: bold}
 .center {text-align: center}
-a {outline:0!important}
+
+section a {outline:0!important; color:#009973!important;}
+section a:hover {color:#00cc99!important;}
+.nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover {
+	background-color: #009973;
+}
+.nav>li>a:focus, .nav>li>a:hover {color:#009973;}
+
 .name {font-size: 32px;margin-top: 7px;}
 nav a {color: #999;}
 
