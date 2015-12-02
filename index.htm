@@ -25,6 +25,13 @@ body {
 .u {text-decoration: underline}
 .b {font-weight: bold}
 .center {text-align: center}
+a {outline: 0!important}
+a.anchor {
+	display: block;
+	position: relative;
+	top: -50px;
+	visibility: hidden;
+}
 
 section a {outline:0!important; color:#009973!important;}
 section a:hover {color:#00cc99!important;}
@@ -95,8 +102,8 @@ section {padding: 70px 0px}
 }
 .skills {
 	display: inline-block;
-	height: 80px; width: 80px;
-	margin-top: 20px;
+	height: 70px; width: 70px;
+	margin-top: 30px;
 	font-size: 30px;
 	line-height: 140px;
 	text-align: center;
@@ -154,20 +161,20 @@ $(function() {
 	</a></div>
 
 	<ul id="navnav" class="nav nav-pills pull-right">
-		<li><a target="_self" href="#index">Home</a></li>
-		<li><a target="_self" href="#interests">Research Interests</a></li>
-		<li><a target="_self" href="#publications">Publications</a></li>
-		<li><a target="_self" href="#teaching">Teaching</a></li>
-		<li><a target="_self" href="#outreach">Outreach</a></li>
-		<li><a target="_self" href="#skills">Skills</a></li>
-		<li><a target="_self" href="#personal">Personal</a></li>
+		<li><a target="_self" href="#_index">Home</a></li>
+		<li><a target="_self" href="#_interests">Research Interests</a></li>
+		<li><a target="_self" href="#_publications">Publications</a></li>
+		<li><a target="_self" href="#_teaching">Teaching</a></li>
+		<li><a target="_self" href="#_outreach">Outreach</a></li>
+		<li><a target="_self" href="#_skills">Skills</a></li>
+		<li><a target="_self" href="#_personal">Personal</a></li>
 	</ul>
 
 </div>
 </nav>
 
 <!-- Page index -->
-<div id="index" class="bg">
+<div id="index" class="bg"><a class="anchor" id="_index"></a>
 	<h2 id="contact-links">
 		<a target="_blank" href="https://www.facebook.com/corina.grigore"><img alt="Facebook" src="fb.png"></a>
 		<a target="_blank" href="https://www.linkedin.com/in/elena-corina-grigore-42704951"><img alt="LinkedIn" src="in.png"></a>
@@ -213,14 +220,14 @@ Take a look at my <a href="CV.pdf">CV</a> for more details.</p>
 </section>
 
 <!-- Research Interests -->
-<div id="interests" class="bg"><h2>Research Interests</h2></div>
+<div id="interests" class="bg"><a class="anchor" id="_interests"></a><h2>Research Interests</h2></div>
 <section class="container">
 Robotics, machine learning, artificial intelligence, human-robot interaction, human-robot teaming, adaptive systems, policy search, reinforcement learning, user modeling.
 </section>
 
 
 <!-- Publications -->
-<div id="publications" class="bg"><h2>Publications</h2></div>
+<div id="publications" class="bg"><a class="anchor" id="_publications"></a><h2>Publications</h2></div>
 <section class="container">
 <ol reversed>
 	<li>
@@ -282,7 +289,7 @@ Robotics, machine learning, artificial intelligence, human-robot interaction, hu
 </section>
 
 <!-- Teaching -->
-<div id="teaching" class="bg"><h2>Teaching</h2></div>
+<div id="teaching" class="bg"><a class="anchor" id="_teaching"></a><h2>Teaching</h2></div>
 <section class="container">
 <p>As a graduate student at Yale, I have assisted in teaching the following courses:</p>
 <table class="table table-striped">
@@ -349,7 +356,7 @@ Robotics, machine learning, artificial intelligence, human-robot interaction, hu
 </section>
 
 <!-- Outreach -->
-<div id="outreach" class="bg"><h2>Outreach</h2></div>
+<div id="outreach" class="bg"><a class="anchor" id="_outreach"></a><h2>Outreach</h2></div>
 <section class="container">
 <ul>
 	<li><a target="_blank" href="http://www.worldsciencefestival.com/">New York City Science Festival</a></li>
@@ -359,7 +366,7 @@ Robotics, machine learning, artificial intelligence, human-robot interaction, hu
 </section>
 
 <!-- Skills -->
-<div id="skills" class="bg"><h2>Skills</h2></div>
+<div id="skills" class="bg"><a class="anchor" id="_skills"></a><h2>Skills</h2></div>
 <section class="container">
 
 	<div id="skill-box">
@@ -398,7 +405,7 @@ Robotics, machine learning, artificial intelligence, human-robot interaction, hu
 </section>
 
 <!-- Personal -->
-<div id="personal" class="bg"><h2>Personal</h2></div>
+<div id="personal" class="bg"><a class="anchor" id="_personal"></a><h2>Personal</h2></div>
 <section class="container">
 <ul>
 	<li>Romania is my home country.</li>
