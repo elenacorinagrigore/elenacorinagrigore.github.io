@@ -88,7 +88,9 @@ section {padding: 70px 0px}
 	float: right;
 	margin-top: 40px;
 }
-#pic {height: 180px; float: left;margin-top: 20px;}
+#pic {height: 200px; float: left;margin-top: 20px;}
+#pic img {height: 180px;}
+#pic figcaption {text-align: center;} /* this is pretty nifty --Debayan*/
 
 /* Skills */
 #skill-box {
@@ -171,6 +173,7 @@ $(function() {
 <!-- Page index -->
 <div id="index" class="bg"><a class="anchor" id="_index"></a>
 	<h2 id="contact-links">
+		<a target="_blank" href="https://scholar.google.com/citations?user=iZwOlgsAAAAJ"><img alt="Google Scholar" src="gs.png"></a>
 		<a target="_blank" href="https://www.facebook.com/corina.grigore"><img alt="Facebook" src="fb.png"></a>
 		<a target="_blank" href="https://www.linkedin.com/in/elena-corina-grigore-42704951"><img alt="LinkedIn" src="in.png"></a>
 		<a target="_blank" href="mailto:elena.corina.grigore@yale.edu"><img alt="Email" src="email.png"></a>
@@ -186,9 +189,11 @@ $(function() {
 	<a target="_blank" href="http://www.cs.yale.edu/homes/scaz/">Brian Scassellati</a>.</p>
 <p>I'm interested in machine learning techniques applied to robotics, reinforcement learning for continuous state and action spaces, and policy search methods. I have started to look at these in the context of human-robot teaming.
 <p>Before coming to Yale, I completed a Master of Engineering from the <a target="_blank" href="http://www.bristol.ac.uk/">University of Bristol</a>.
-Take a look at my <a href="CV.pdf">CV</a> for more details!</p>
+Take a look at my <a href="CV.pdf">CV</a> for more details.</p>
 
-<img alt="Elena Corina Grigore" src="pic.jpg" id="pic">
+<figure id="pic">
+<img alt="Elena Corina Grigore" src="pic.jpg"><figcaption>Call me Corina!</figcaption>
+</figure>
 
 <div class="equalizer school-box">
 <a target="_blank" href="http://www.yale.edu/" class="box" title="Yale University" style="margin-left:0">
@@ -217,7 +222,8 @@ Take a look at my <a href="CV.pdf">CV</a> for more details!</p>
 <!-- Research Interests -->
 <div id="interests" class="bg"><a class="anchor" id="_interests"></a><h2>Research Interests</h2></div>
 <section class="container">
-My passion in research is to apply machine learning techniques to the field of robotics in order to create autonomous robots capable of learning useful behaviors in dynamic environments. In order to achieve the wide array of functionality we wish robots to have in the future, we need to come up with dependable learning techniques that make it possible the robot learn both from the people it interacts with and its environment. From this standpoint, I am interested in looking at applying reinforcement learning techniques capable of mapping raw input such as motion capture system data or camera images to actions the robot should take at each level of a given task. Applying such techniques to continuous state and action spaces introduces considerable challenges, especially when considering human-in-the-loop scenarios.
+	<p>My passion in research is to apply machine learning techniques to the field of robotics in order to create autonomous robots capable of learning useful behaviors in dynamic environments. In order to achieve the wide array of functionalities we want robots to have in the future, we need to come up with dependable learning techniques that make it possible for the robot learn from both the people it interacts with and its environment.</p>
+	<p>From this standpoint, I am interested in applying reinforcement learning techniques capable of mapping raw input (such as motion capture system data or camera images) to actions the robot should take at each level of a given task. Applying such techniques to continuous state and action spaces involves considerable challenges, especially when considering human-in-the-loop scenarios.</p>
 </section>
 
 
