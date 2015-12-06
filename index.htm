@@ -68,9 +68,14 @@ section {padding: 70px 0px}
 	background:rgba(0,0,0,0.55);
 }
 
-#contact-links img {height:50px; width:50px; border-radius:10px;background-color:black;}
-#contact-links a {-webkit-filter: grayscale(100%); filter: grayscale(100%);}
-#contact-links a:hover {-webkit-filter: grayscale(0%); filter: grayscale(0%);}
+.contact-links img {height:50px; width:50px; border-radius:10px;background-color:black;}
+.contact-links a {-webkit-filter: grayscale(100%); filter: grayscale(100%);}
+.contact-links a:hover {-webkit-filter: grayscale(0%); filter: grayscale(0%);}
+
+/* for contacts section at bottom */
+.contact-links2 img {height:50px; width:50px; border-radius:10px;background-color:black;}
+.contact-links2 a {height:50px; width:50px; border-radius:10px;-webkit-filter: grayscale(40%); filter: grayscale(40%);}
+.contact-links2 a:hover {box-shadow: 0 0 20px black; -webkit-filter: grayscale(0%); filter: grayscale(0%);}
 
 .box {
   display:inline-block;
@@ -166,6 +171,7 @@ $(function() {
 		<li><a target="_self" href="#_outreach">Outreach</a></li>
 		<li><a target="_self" href="#_skills">Skills</a></li>
 		<li><a target="_self" href="#_personal">Personal</a></li>
+		<li><a target="_self" href="#_contacts">Contact Me</a></li>
 	</ul>
 
 </div>
@@ -173,7 +179,7 @@ $(function() {
 
 <!-- Page index -->
 <div id="index" class="bg"><a class="anchor" id="_index"></a>
-	<h2 id="contact-links">
+	<h2 class="contact-links">
 		<a target="_blank" href="https://scholar.google.com/citations?user=iZwOlgsAAAAJ"><img alt="Google Scholar" src="gs.png"></a>
 		<a target="_blank" href="https://www.facebook.com/corina.grigore"><img alt="Facebook" src="fb.png"></a>
 		<a target="_blank" href="https://www.linkedin.com/in/elena-corina-grigore-42704951"><img alt="LinkedIn" src="in.png"></a>
@@ -420,6 +426,24 @@ Take a look at my <a href="CV.pdf">CV</a> for more details.</p>
 		<img style="height:234px" alt="tango group" src="photos/tango.jpg">
 		I love to dance! My hobbies include salsa and tango, which keep me active and on beat and through which I have made some dear friends.</li>
 </ul>
+</section>
+
+<!-- Contacts -->
+<div id="contacts" class="bg"><a class="anchor" id="_contacts"></a><h2>Contact Me</h2></div>
+<section class="container">
+
+<p>
+	I am always happy to talk about research! Contact me at:
+</p>
+
+<h2 class="contact-links2 center">
+	<a target="_blank" href="https://scholar.google.com/citations?user=iZwOlgsAAAAJ"><img alt="Google Scholar" src="gs.png"></a>
+	<a target="_blank" href="https://www.facebook.com/corina.grigore"><img alt="Facebook" src="fb.png"></a>
+	<a target="_blank" href="https://www.linkedin.com/in/elena-corina-grigore-42704951"><img alt="LinkedIn" src="in.png"></a>
+	<a target="_blank" href="mailto:elena.corina.grigore@yale.edu"><img alt="Email" src="email.png"></a>
+	<a target="_blank" href="CV.pdf"><img alt="CV" src="cv.png"></a>
+</h2>
+
 </section>
 
 </body> 
