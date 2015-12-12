@@ -59,7 +59,7 @@ section {padding: 70px 0px}
 .equalizer {display:flex;justify-content:space-between;}
 .bg {
 	background:fixed;background-position:bottom;background-size:cover;
-	height:200px;padding:0px;
+	height:20vh;padding:0px;
 	overflow: hidden;
 	background-image:url('robot.jpg'); /* replace with multiple later --Debayan*/
 }
@@ -67,7 +67,7 @@ section {padding: 70px 0px}
 	text-shadow:0 0 10px black, 0 0 2px black;color:#FFF;
 	font-size:50px;text-align:center;
 	margin: 0; padding: 0;
-	line-height: 230px;
+	line-height: 20vh;
 	background:rgba(0,0,0,0.55);
 }
 
@@ -153,7 +153,7 @@ $(function() {
 		$(".skills").css("opacity", 1); 
 	});
 
-	$.scrollify({ section : ".page" });
+	$.scrollify({ section : ".page", offset : -64 });
 
 });
 	</script>
