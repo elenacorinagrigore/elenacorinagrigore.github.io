@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html>
+ 
+<head>
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <base target="_blank">
+  <link rel="shortcut icon" href="favicon.ico">
+  
+  <title>Elena Corina Grigore - Academic webpage</title>
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+
+  <script src="https://code.jquery.com/jquery-2.1.3.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+  <script src="jquery.scrollify.min.js"></script>
+  
+  <style type="text/css">
+
+body {
+	font-family:"Times New Roman", Times, serif;
+	font-size:16px; margin:0;padding:0;
+	padding-top: 30px;
+}
+.u {text-decoration: underline}
+.b {font-weight: bold}
+.center {text-align: center}
+a {outline: 0!important}
+a.anchor {
+	display: block;
+	position: relative;
+	top: -50px;
+	visibility: hidden;
+}
+
+section a {outline:0!important; color:#009973!important;}
+section a:hover {color:#00cc99!important;}
+.nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover {
+	background-color: #009973;
+}
+.nav>li>a:focus, .nav>li>a:hover {color:#009973;}
+
+.name {font-size: 32px;margin-top: 7px;}
+nav a {color: #999;}
+
+a .fname {color:#777;}
+a .aname {color:#CCC;}
+a:hover .fname, a:hover .aname {color: white;text-shadow:0 0 3px white;}
+
+li {margin:10px 0px;}
+li p {margin:0px;}
+li p:first-child {font-weight:bold}
+li p:first-child span {font-weight:normal}
+ol li>a {font-style:italic}
+
+section {padding: 70px 0px}
+.equalizer {display:flex;justify-content:space-between;}
+.bg {
+	background:fixed;background-position:bottom;background-size:cover;
+	height:200px;padding:0px;
+	overflow: hidden;
+	background-image:url('robot.jpg'); /* replace with multiple later --Debayan*/
+}
+.bg>h2 {
+	text-shadow:0 0 10px black, 0 0 2px black;color:#FFF;
+	font-size:50px;text-align:center;
+	line-height: 200px;
+	background:rgba(0,0,0,0.55);
+}
+
+.contact-links img {height:50px; width:50px; border-radius:10px;background-color:black;}
+.contact-links a {-webkit-filter: grayscale(100%); filter: grayscale(100%);}
+.contact-links a:hover {-webkit-filter: grayscale(0%); filter: grayscale(0%);}
+
+/* for contacts section at bottom */
+.contact-links2 img {height:50px; width:50px; border-radius:10px;background-color:black;}
+.contact-links2 a {height:50px; width:50px; border-radius:10px;-webkit-filter: grayscale(40%); filter: grayscale(40%);}
+.contact-links2 a:hover {box-shadow: 0 0 20px black; -webkit-filter: grayscale(0%); filter: grayscale(0%);}
+
+.box {
+  display:inline-block;
+  width:70px;font-size:12px;
+  margin:5px;
+  vertical-align:top;
+  text-align: center;
+  text-decoration: none!important;
+}
+.box>img {max-height:70px;max-width:70px;}
+.box>h3 {font-size: 12px;color: black}
+.box p {text-align:justify}
+.school-box {
+	width: 400px;
+	float: right;
+	margin-top: 40px;
+}
+#pic {height: 200px; float: left;margin-top: 20px;}
+#pic img {height: 180px;}
+#pic figcaption {text-align: center;} /* this is pretty nifty --Debayan*/
+
+/* Skills */
+#skill-box {
+	width: 950px;
+	margin:0px auto;
+}
+.skills {
+	display: inline-block;
+	height: 70px; width: 70px;
+	margin-top: 30px;
+	font-size: 30px;
+	line-height: 140px;
+	text-align: center;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+}
+.type {
+	display: inline-block;
+	border: 1px black solid;
+	padding:5px 7px;
+	cursor: pointer;
+	margin: 10px;
+	margin-top: 80px;
+	background: black;
+	color: white!important;
+	border:3px white solid;
+}
+.type:hover {text-decoration: none; border-color:black;}
+#personal-images li {height: 150px;}
+#personal-images img {margin-left: 18px;float: right;}
+
+	</style>
+	<script type="text/javascript">
+$(function() {
+	$("#navnav a[href^='#']").on('click', function(e) {
+
+		e.preventDefault();
+		var hash = this.hash;
+
+		$('html, body').animate({scrollTop: $(hash).offset().top}, 900, function(){
+			window.location.hash = hash;
+		});
+
+	});
+
+	$(".type").mouseover(function() {
+		$(".skills").css("opacity", 0.2); 
+		$("."+$(this).attr('id')).css("opacity", 1);
+
+	}).mouseleave(function() { 
+		$(".skills").css("opacity", 1); 
+	});
+
+	$.scrollify({ section : ".page" });
+
+});
+	</script>
+</head> 
+
+<body data-offset="65" data-spy="scroll" data-target=".main-spy">
+
+<nav class="main-spy navbar navbar-default navbar-fixed-top navbar-inverse">
+<div class="container">
+
+	<div class="navbar-header"><a target="_self" class="navbar-brand name" href="#">
+		<span class="fname">Elena</span> <span class="aname">Corina Grigore</span>
+	</a></div>
+
+	<ul id="navnav" class="nav nav-pills pull-right">
+		<li><a target="_self" href="#index">Home</a></li>
+		<li><a target="_self" href="#interests">Research Interests</a></li>
+		<li><a target="_self" href="#publications">Publications</a></li>
+		<li><a target="_self" href="#teaching">Teaching</a></li>
+		<li><a target="_self" href="#outreach">Outreach</a></li>
+		<li><a target="_self" href="#skills">Skills</a></li>
+		<li><a target="_self" href="#personal">Personal</a></li>
+		<li><a target="_self" href="#contacts">Contact Me</a></li>
+	</ul>
+
+</div>
+</nav>
+
+<!-- Page index -->
+<div class="page">
+<div id="index" class="bg"><a class="anchor" id="_index"></a>
+	<h2 class="contact-links">
+		<a target="_blank" href="https://scholar.google.com/citations?user=iZwOlgsAAAAJ"><img alt="Google Scholar" src="gs.png"></a>
+		<a target="_blank" href="https://www.facebook.com/corina.grigore"><img alt="Facebook" src="fb.png"></a>
+		<a target="_blank" href="https://www.linkedin.com/in/elena-corina-grigore-42704951"><img alt="LinkedIn" src="in.png"></a>
+		<a target="_blank" href="mailto:elena.corina.grigore@yale.edu"><img alt="Email" src="email.png"></a>
+		<a target="_blank" href="CV.pdf"><img alt="CV" src="cv.png"></a>
+	</h2>
+</div>
+<section class="container">
+<p class="lead">I'm a Ph.D. candidate in the 
+	<a target="_blank" href="http://scazlab.yale.edu/">Social Robotics Lab</a> within the 
+	<a target="_blank" href="http://cpsc.yale.edu/">Department of Computer Science</a> at 
+	<a target="_blank" href="http://www.yale.edu/">Yale University</a>.<br>
+	My advisor is 
+	<a target="_blank" href="http://www.cs.yale.edu/homes/scaz/">Brian Scassellati</a>.</p>
+<p>I'm interested in machine learning techniques applied to robotics, reinforcement learning for continuous state and action spaces, and policy search methods. I have started to look at these in the context of human-robot teaming.
+<p>Before coming to Yale, I completed a Master of Engineering from the <a target="_blank" href="http://www.bristol.ac.uk/">University of Bristol</a>.
+Take a look at my <a href="CV.pdf">CV</a> for more details.</p>
+
+<figure id="pic">
+<img alt="Elena Corina Grigore" src="pic.jpg"><figcaption>Call me Corina!</figcaption>
+</figure>
+
+<div class="equalizer school-box">
+<a target="_blank" href="http://www.yale.edu/" class="box" title="Yale University" style="margin-left:0">
+	<img alt="Yale University" src="logo/yale.png">
+	<h3>Yale University</h3>
+</a>
+
+<a target="_blank" href="http://seas.yale.edu/" class="box" title="Yale School of Engineering &amp; Applied Science">
+	<img alt="Yale School of Engineering &amp; Applied Science" src="logo/seas.png">
+	<h3>Yale Engineering</h3>
+</a>
+
+<a target="_blank" href="http://www.bristol.ac.uk/" class="box" title="University of Bristol">
+	<img alt="University of Bristol" src="logo/bristol.png">
+	<h3>University of Bristol</h3>
+</a>
+
+<a target="_blank" href="https://ucsd.edu/" class="box" title="University of California, San Diego">
+	<img alt="University of California, San Diego" src="logo/ucsd.png">
+	<h3>University of California, San Diego</h3>
+</a>
+</div>
+
+</section>
+</div>
+
+<!-- Research Interests -->
+<div class="page">
+<div id="interests" class="bg"><a class="anchor" id="_interests"></a><h2>Research Interests</h2></div>
+<section class="container">
+	<p>My passion in research is to apply machine learning techniques to the field of robotics in order to create autonomous robots capable of learning useful behaviors in dynamic environments. In order to achieve the wide array of functionalities we want robots to have in the future, we need to come up with dependable learning techniques that make it possible for the robot learn from both the people it interacts with and its environment.</p>
+	<p>From this standpoint, I am interested in applying reinforcement learning techniques capable of mapping raw input (such as motion capture system data or camera images) to actions the robot should take at each level of a given task. Applying such techniques to continuous state and action spaces involves considerable challenges, especially when considering human-in-the-loop scenarios.</p>
+</section>
+</div>
+
+
+<!-- Publications -->
+<div class="page">
+<div id="publications" class="bg"><a class="anchor" id="_publications"></a><h2>Publications</h2></div>
+<section class="container">
+<p style="margin-bottom:15px"> Here is a list of my publications, in reverse chronological order (9 - 1):</p>
+<ul>
+	<li>
+		<p>Constructing Policies for Supportive Behaviors and Communicative Actions in Human-Robot Teaming <span>[<a href="#">PDF</a>]</span></p>
+		<a href="#">Under review</a>
+		<p><span class="b">E.C. Grigore</span>, B. Scassellati</p>
+	</li>
+
+	<li>
+		<p>Modeling Motivational States through Interpreting Physical Activity Data for Adaptive Robot Companions <span>[<a href="papers/umap15.pdf">PDF</a>]</span></p>
+		<a href="http://umap2015.com/">Proceedings of the 23rd International Conference on User Modelling, Adaptation and Personalization (UMAP) 2015</a>
+		<p><span class="b">E.C. Grigore</span></p>
+	</li>
+	
+	<li>
+		<p>Modeling Motivational States in Adaptive Robot Companions <span>[<a href="papers/ai_hri15.pdf">PDF</a>]</span></p>
+		<a href="http://www.aaai.org/Symposia/Fall/fss15.php">2015 AAAI Fall Symposium Series</a>
+		<p><span class="b">E.C. Grigore</span>, A. Pereira, B. Scassellati</p>
+	</li>
+
+	<li>
+		<p>Maintaining Engagement in Shared Goals with a Personal Robot Companion through Motivational State Modeling <span>[<a href="papers/hri_human_robot_w15.pdf">PDF</a>]</span></p>
+		<a href="http://bradhayes.info/hri15/">Proceedings of the Human-Robot Teaming Workshop at the 10th ACM/IEEE International Conference on Human-Robot Interaction (HRI) 2015</a>
+		<p><span class="b">E.C. Grigore</span>, B. Scassellati</p>
+	</li>
+
+	<li>
+		<p>A Developmentally Inspired Transfer Learning Approach for Predicting Skill Durations <span>[<a href="papers/icdl14.pdf">PDF</a>]</span></p>
+		<a href="http://icdl-epirob.org/">Proceedings of the 4th joint IEEE International Conference on Development and Learning and on Epigenetic Robotics (ICDL-EPIROB) 2014</a>
+		<p> B. Hayes, <span class="b">E.C. Grigore</span>, A. Litoiu, A. Ramachandran, B. Scassellati</p>
+	</li>
+
+	<li>
+		<p>How to Train Your DragonBot: Socially Assistive Robots for Teaching Children About Nutrition Through Play <span>[<a href="papers/ro_man14.pdf">PDF</a>]</span></p>
+		<a href="http://rehabilitationrobotics.net/ro-man14/">Proceedings of the 23rd IEEE Robot and Human Interactive Communication, 2014 (ROMAN) 2014</a>
+		<p>E. Short, K. Swift-Spong, J. Greczek, A. Ramachandran, A. Litoiu, <span class="b">E.C. Grigore</span>, D. Feil-Seifer, S. Shuster, J.J. Lee, S. Huang, S. Levonisova, S. Litz, J. Li, G. Ragusa, D. Spruijt-Metz, M.J. Mataric, B. Scassellati</p>
+	</li>
+
+	<li>
+		<p>Joint Action Understanding Improves Robot-to-Human Object Handover <span>[<a href="papers/iros2013.pdf">PDF</a>]</span></p>
+		<a href="http://www.iros2013.org/">Proceedings of the 26th IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS) 2013</a>
+		<p><span class="b">E.C. Grigore</span>, K. Eder, A.G. Pipe, C. Melhuish, U. Leonards</p>
+	</li>
+
+	<li>
+		<p>Feasibility of SAR Approaches - Helping Children with Learning Tasks <span>[<a href="papers/iros_devsor_w13.pdf">PDF</a>]</span></p>
+		<a href="http://devsor2013.sciencesconf.org/">Proceedings of the International Workshop on Developmental Social Robotics (DevSor): Reasoning about Human, Perspective, Affordances and Effort for Socially Situated Robots at the 26th IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS) 2013</a>
+		<p><span class="b">E.C. Grigore</span>, B. Scassellati</p>
+	</li>
+
+	<li>
+		<p>Towards Safe Human-Robot Interaction <span>[<a href="papers/taros11.pdf">PDF</a>]</span></p>
+		<a href="http://research.shu.ac.uk/taros11/">Proceedings of the 12th Annual Towards Autonomous Robotic Systems (TAROS) 2011</a>
+		<p><span class="b">E.C. Grigore</span>, K. Eder, A. Lenz, S. Skachek, A.G. Pipe, C. Melhuish</p>
+	</li>
+
+</ul>
+
+</section>
+</div>
+
+<!-- Teaching -->
+<div class="page">
+<div id="teaching" class="bg"><a class="anchor" id="_teaching"></a><h2>Teaching</h2></div>
+<section class="container">
+<p>As a graduate student at Yale, I have assisted in teaching the following courses:</p>
+<table class="table table-striped">
+<thead>
+	<tr>
+		<th>Period</th>
+		<th>Course Code</th>
+		<th>Course Title</th>
+		<th>Instructor</th>
+		<th>Capacity</th>
+	</tr>
+</thead>
+<tbody>
+
+	<tr>
+		<td>Fall 2015</td>
+		<td><a href="http://zoo.cs.yale.edu/classes/cs202/">CPSC 437/537</a></td>
+		<td>Mathematical Tools for Computer Science</td>
+		<td><a href="http://cpsc.yale.edu/people/dana-angluin">Dana Angluin</a></td>
+		<td>Teaching Fellow</td>
+	</tr>
+
+	<tr>
+		<td>Spring 2015</td>
+		<td><a href="http://zoo.cs.yale.edu/classes/cs472/">CPSC 472/572</a></td>
+		<td>Intelligent Robotics</td>
+		<td><a target="_blank" href="http://www.cs.yale.edu/homes/scaz/">Brian Scassellati</a></td>
+		<td>Teaching Fellow</td>
+	</tr>
+
+	<tr>
+		<td>Fall 2014</td>
+		<td><a href="http://zoo.cs.yale.edu/classes/cs202/">CPSC 437/537</a></td>
+		<td>Mathematical Tools for Computer Science</td>
+		<td><a href="http://cpsc.yale.edu/people/dana-angluin">Dana Angluin</a></td>
+		<td>Teaching Fellow</td>
+	</tr>
+
+	<tr>
+		<td>Spring 2014</td>
+		<td><a href="http://zoo.cs.yale.edu/classes/cs473/">CPSC 473/573</a></td>
+		<td>Intelligent Robotics Lab</td>
+		<td><a target="_blank" href="http://www.cs.yale.edu/homes/scaz/">Brian Scassellati</a></td>
+		<td>Teaching Fellow</td>
+	</tr>
+
+	<tr>
+		<td>Fall 2013</td>
+		<td><a href="http://zoo.cs.yale.edu/classes/cs472/">CPSC 472/572</a></td>
+		<td>Intelligent Robotics Lab</td>
+		<td><a target="_blank" href="http://www.cs.yale.edu/homes/scaz/">Brian Scassellati</a></td>
+		<td>Teaching Fellow</td>
+	</tr>
+
+</tbody>
+</table>
+
+<p>Other teaching and mentoring:</p>
+<ul>
+	<li>I mentored five undergraduate students and a high-school student on research projects they performed as part of our lab. (2013-2015)</li>
+	<li>In college, I was a mathematics student-teacher as part of the Students Associates Scheme at <a target="_blank" href="http://www.sidneystringeracademy.org.uk/">Sydney Stringer Academy</a>, UK. (2013)</li>
+</ul>
+
+</section>
+</div>
+
+<!-- Outreach -->
+<div class="page">
+<div id="outreach" class="bg"><a class="anchor" id="_outreach"></a><h2>Outreach</h2></div>
+<section class="container">
+<p>Throughout my time at Yale, I have been involved with several outreach activities:</p>
+<ul>
+	<li>We joined the <a target="_blank" href="http://www.worldsciencefestival.com/">New York City Science Festival</a> in 2014.</li>
+	<li>We hold lab open houses every year, so be on the lookout for news on the <a target="_blank" href="http://scazlab.yale.edu/">lab webpage</a> and join us next time!</li>
+	<li>We routinely take our robots to showcase them and talk about our research at local schools in CT.</li>
+</ul>
+</section>
+</div>
+
+<!-- Skills -->
+<div class="page">
+<div id="skills" class="bg"><a class="anchor" id="_skills"></a><h2>Skills</h2></div>
+<section class="container">
+
+	<div id="skill-box">
+		<div class="equalizer">
+			<div id="item00" class="skills skill-pl" style="background-image:url('logo/cpp.png')"></div>
+			<div id="item01" class="skills skill-rp" style="background-image:url('logo/keepon.png')"></div>
+			<div id="item02" class="skills skill-sw skill-rp" style="background-image:url('logo/ros.png')"></div>
+			<div id="item03" class="skills skill-pl" style="background-image:url('logo/java.png')"></div>
+			<div id="item04" class="skills skill-rp"  style="background-image:url('logo/nao.png')"></div>
+			<div id="item05" class="skills skill-pl" style="background-image:url('logo/python.png')"></div>
+			<div id="item06" class="skills skill-pl" style="background-image:url('logo/latex.png')"></div>
+		</div>
+		<div class="equalizer">
+			<div id="item10" class="skills skill-rp"  style="background-image:url('logo/baxter.png')"></div>
+			<div id="item11" class="skills skill-sw" style="background-image:url('logo/git.png')"></div>
+			<div id="item12" class="skills skill-sw"  style="background-image:url('logo/eclipse.png')"></div>
+			<div id="item13" class="skills skill-sw" style="background-image:url('logo/android.png')"></div>
+			<div id="item14" class="skills skill-pl" style="background-image:url('logo/csharp.png')"></div>
+			<div id="item15" class="skills skill-pl" style="background-image:url('logo/matlab.png')"></div>
+			<div id="item16" class="skills skill-sw" style="background-image:url('logo/xcode.png')"></div>
+		</div>
+		<div class="equalizer">
+			<div id="item20" class="skills skill-pl"  style="background-image:url('logo/html5.png')"></div>
+			<div id="item21" class="skills skill-pl" style="background-image:url('logo/css3.png')"></div>
+			<div id="item22" class="skills skill-rp"  style="background-image:url('logo/yarp.png')"></div>
+			<div id="item23" class="skills skill-sw" style="background-image:url('logo/vs.png')"></div>
+			<div id="item24" class="skills skill-pl" style="background-image:url('logo/php.png')"></div>
+			<div id="item25" class="skills skill-sw" style="background-image:url('logo/vicon.png')"></div>
+			<div id="item26" class="skills skill-sw" style="background-image:url('logo/netbeans.png')"></div>
+		</div>
+	</div>
+
+	<div id="skill-types" class="center">
+		<a class="type" id="skill-pl">Programming Languages</a>
+		<a class="type" id="skill-sw">Software / IDEs</a>
+		<a class="type" id="skill-rp">Robotics Platforms</a>
+	</div>
+
+</section>
+</div>
+
+<!-- Personal -->
+<div class="page">
+<div id="personal" class="bg"><a class="anchor" id="_personal"></a><h2>Personal</h2></div>
+<section class="container">
+<ul id="personal-images">
+	<li>
+		<img style="height:140px" alt="map" src="photos/map.png">
+		<img style="height:140px" alt="Piatra Neamt" src="photos/town.jpg">
+		Romania is my home. I come from a gorgeous town called <a target="_blank" href="https://en.wikipedia.org/wiki/Piatra_Neam%C8%9B">Piatra Neamț</a> in the country's north-east. The picture to the right shows one of the historical buildings still standing in the city center (a tower raised by <a target="_blank" href="https://en.wikipedia.org/wiki/Stephen_III_of_Moldavia">Stephen the Great</a>).</li>
+	<li>
+		<img style="height:234px" alt="tango group" src="photos/tango.jpg">
+		I love to dance! My hobbies include salsa and tango, which keep me active and on beat and through which I have made some dear friends.</li>
+</ul>
+</section>
+
+<!-- Contacts -->
+<div id="contacts" class="bg"><a class="anchor" id="_contacts"></a><h2>Contact Me</h2></div>
+<section class="container">
+
+
+<p align="center">
+I am always happy to talk about research! Contact me at:
+</p>
+
+<h2 class="contact-links2 center">
+	<a target="_blank" href="https://scholar.google.com/citations?user=iZwOlgsAAAAJ"><img alt="Google Scholar" src="gs.png"></a>
+	<a target="_blank" href="https://www.facebook.com/corina.grigore"><img alt="Facebook" src="fb.png"></a>
+	<a target="_blank" href="https://www.linkedin.com/in/elena-corina-grigore-42704951"><img alt="LinkedIn" src="in.png"></a>
+	<a target="_blank" href="mailto:elena.corina.grigore@yale.edu"><img alt="Email" src="email.png"></a>
+	<a target="_blank" href="CV.pdf"><img alt="CV" src="cv.png"></a>
+</h2>
+
+</section>
+</div>
+
+</body> 
+ 
+</html> 
+ 
+<!-- Debayan Gupta -->
