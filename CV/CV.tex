@@ -1,0 +1,308 @@
+\documentclass[10pt,letterpaper]{article}
+
+% packages
+\usepackage{nopageno}
+\usepackage[top=1in, bottom=1in, left=1in, right=1in]{geometry}
+\usepackage[bookmarks=false,hidelinks]{hyperref}
+\usepackage{titlesec}
+\usepackage{lastpage}
+\usepackage{fancyhdr}
+\usepackage[usenames,dvipsnames]{xcolor} % colours
+\usepackage[inline]{enumitem} % inline lists
+\usepackage[backend=bibtex,style=ieee,sorting=ydnt,doi=false,isbn=false,url=false,defernumbers=true]{biblatex}
+\usepackage[romanian]{babel}
+\usepackage{combelow}
+\usepackage{lipsum}
+
+%-----------------------
+
+
+\usepackage{xpatch}% or use http://tex.stackexchange.com/a/40705
+
+\newbibmacro*{name:bold}[2]{%
+  \def\do##1{\ifstrequal{#1, #2}{##1}{\bfseries\listbreak}{}}%
+  \dolistloop{\boldnames}}
+\newcommand*{\boldnames}{}
+
+\xpretobibmacro{name:last}{\begingroup\usebibmacro{name:bold}{#1}{#2}}{}{}
+\xpretobibmacro{name:first-last}{\begingroup\usebibmacro{name:bold}{#1}{#2}}{}{}
+\xpretobibmacro{name:last-first}{\begingroup\usebibmacro{name:bold}{#1}{#2}}{}{}
+\xpretobibmacro{name:delim}{\begingroup\normalfont}{}{}
+
+\xapptobibmacro{name:last}{\endgroup}{}{}
+\xapptobibmacro{name:first-last}{\endgroup}{}{}
+\xapptobibmacro{name:last-first}{\endgroup}{}{}
+\xapptobibmacro{name:delim}{\endgroup}{}{}
+
+% just for demonstration
+\ExecuteBibliographyOptions{maxnames=99,firstinits}
+
+\forcsvlist{\listadd\boldnames}
+  {{Grigore, Elena~Corina}, {Grigore, E.~C.}, {Grigore, Elena\bibnamedelima Corina},
+   {Grigore, E\bibinitperiod\bibinitdelim C\bibinitperiod}}
+
+%-----------------------
+
+% Count total number of entries in each refsection
+\AtDataInput{%
+  \csnumgdef{entrycount:\therefsection}{%
+    \csuse{entrycount:\therefsection}+1}}
+
+% Print the labelnumber as the total number of entries in the
+% current refsection, minus the actual labelnumber, plus one
+\DeclareFieldFormat{labelnumber}{\mkbibdesc{#1}}    
+\newrobustcmd*{\mkbibdesc}[1]{%
+  \number\numexpr\csuse{entrycount:\therefsection}-#1\relax}
+
+\bibliography{CV.bib}
+
+% customizations
+%\titleformat{\section}{\Large\uppercase}{\thesection}{1em}{} % modify section format
+%\titlespacing{\section}{0em}{1.2em}{1em}
+
+% custom commands
+\newcommand{\vx}{\texorpdfstring{$\vert$}{\textbar}~} % vertical bar; added textorpdfstring due to warning
+%\newcommand{\bx}{\texorpdfstring{$\bullet$}{.}~} % bullet
+\newcommand{\thing}[2]{{#1} \hfill {#2}}
+\renewcommand{\labelitemii}{$\circ$} % replace second-level lists (ii) with hollow circle
+
+% page setup
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot[R]{\textcolor{gray}{Page \thepage\ of \pageref{LastPage}}}
+\renewcommand{\headrulewidth}{0pt}
+\setcounter{secnumdepth}{0} % suppress section numbering
+\setlength\parindent{0pt} % no indent
+
+%title
+\title{\vspace{-3em}
+	\Huge{\textsc{Elena Corina Grigore}}
+	\vspace{-0.5em}
+	\\\noindent\rule{\linewidth}{0.5pt}
+	\vspace{-2.5em}
+	\\\noindent\rule{\linewidth}{0.5pt}
+	\vspace{-3.2em}
+}
+%\author{}
+\date{}
+
+\begin{document}
+
+\maketitle
+\thispagestyle{fancy}
+
+Yale University, Department of Computer Science \hfill Ph.D. Candidate, Yale University\\
+51 Prospect Street, Office 505 \hfill \href{mailto:elena.corina.grigore@yale.edu}{elena.corina.grigore@yale.edu}\\
+New Haven, CT, 06511 USA \hfill \href{http://elenacorinagrigore.com}{elenacorinagrigore.com}
+
+\section{Research Interests}
+\vspace{-0.5em}
+Robotics, machine learning, artificial intelligence, human-robot collaboration, adaptive systems, reinforcement learning, deep learning, multi-agent systems.
+
+\vspace{-0.5em}
+\section{Education}
+\vspace{-0.5em}
+\begin{itemize}%\setlength\itemsep{0em}
+\item \thing{\bf Doctor of Philosophy, Computer Science, Yale University, USA}{2012 -- present}\\
+	Advisor: Brian Scassellati\\
+	Area of study: Learning Supportive Behaviors for Adaptive Robots \\
+	\hphantom{Area of study:} in Human-Robot Collaboration
+\item \thing{\bf Master of Philosophy, Computer Science, Yale University, USA}{2015}
+\item \thing{\bf Master of Science, Computer Science, Yale University, USA}{2015}
+\item \thing{\bf Master of Engineering with Study Abroad\\Computer Science, University of Bristol, UK}{2012}\\
+	Advisors: Kerstin Eder (University of Bristol, UK)\\
+	\hphantom{Advisors:} Anthony G. Pipe (Bristol Robotics Laboratory, UK)\\
+	\hphantom{Advisors:} Christopher Melhuish (Bristol Robotics Laboratory, UK)\\
+	Thesis: {\it ``I Robot, I Think''}\\
+	4-year program encompassing my Bachelor's degree\\
+	Study Abroad at University of California, San Diego (2010/2011)\\
+	Master of Engineering with First Class Honors
+\item \thing{\bf Coventry University, UK}{2009}\\
+	Completed first year of Computing Honors Degree\\
+	Highest scoring student in my cohort\\
+	Transfer to University of Bristol at the end of my first undergraduate year
+\end{itemize}
+
+\vspace{-0.5em}
+\section{Recent Work}
+\begin{itemize}%\setlength\itemsep{0em}
+\item \thing{\bf Research Intern at Uber Advanced Technologies Group, San Francisco, USA}{2017}\\
+      	Integrating temporal context into deep learning networks for self-driving car perception 
+\item \thing{\bf Ongoing Dissertation Work}{2017}\\
+	Learning high-level activities during a human-robot collaboration task for predicting features \\ that prompt the robot to provide assistance \cite{grigore2017learn_activities}
+\end{itemize}
+
+\section{Publications}
+\nocite{*} % print without citations, * for all
+\setlength{\biblabelsep}{0.5em} % separation between number and text
+\printbibliography[heading=none,keyword=publication]
+
+%\newpage
+\section{Honors and Awards}
+\begin{itemize}%\setlength\itemsep{0em}
+\item \thing{\bf Best Paper Finalist, Intelligent Virtual Agents (IVA)}{2016}\\
+	``Verbal Communication Improves Perceptions of Friendship and Social Presence\\
+	 in Human-Robot Interaction''
+\item \thing{\bf Best Student Paper Finalist, International Conference on Social Robotics (ICSR)}{2016}\\
+	``Comparing Ways to Trigger Migration between a Robot\\
+	 and a Virtually Embodied Character''
+\item \thing{\bf Human-Robot Interaction (HRI) Pioneer}{2016}\\
+	 Highly selective workshop that seeks to foster creativity and collaboration across HRI
+\item \thing{\bf Tocher Fellowship, Yale University, USA}{2015}
+\item \thing{\bf Tocher Fellowship, Yale University, USA}{2014}
+\item \thing{\bf EPSRC (Engineering and Physical Sciences Research Council) Fellowship, UK}{2011}\\
+	Summer Research Project at the Bristol Robotics Lab, Bristol, UK
+\item \thing{\bf EPSRC Fellowship, UK}{2010}\\
+	Summer Research Project at the Bristol Robotics Lab, Bristol, UK
+\item \thing{\bf Head of Promotion Honorary Prize,\\Piatra Neam\cb{t} Computer Science High School, Romania}{2008}
+\end{itemize}
+
+\section{Invited Talks}
+
+\begin{itemize}%\setlength\itemsep{0em}
+
+\item \thing{Virtual Assistant Summit, San Francisco, CA \\ \it Can You Lend Me a Hand? Helpers of the Future}{2017}
+\item \thing{STEM Coffee Hour Facilitator, Cheshire, CT \\ \it How is AI Shaping Robotics?}{2017}
+\item \thing{IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS) \\ International Workshop on Developmental Social Robotics (DevSor), Tokyo \\ \it Feasibility of SAR Approaches? Helping Children with Learning Tasks}{2013}
+
+\end{itemize}
+
+
+\section{Thesis}
+\printbibliography[heading=none,keyword=thesis,omitnumbers=true,prefixnumbers={Master's Thesis}]
+
+\section{Research Experience}
+\begin{itemize}%\setlength\itemsep{1em}
+\item {\bf Yale University, Social Robotics Laboratory, CT, USA}\\
+	\begin{itemize}\setlength\itemsep{0.8em}\vspace{-1em}
+	\item \thing{\it Learning Supportive Behaviors for Adaptive Robots \\ in Human-Robot Collaboration}{2014 -- present}\vspace{0.1em}\\
+	Applying machine learning techniques to endow robots with learning capabilities needed when placed in new environments or faced with new tasks. This includes learning about the structure and progression of a physical task, as well as about the actions human workers perform during this task. Investigating techniques including Hidden Markov Models and reinforcement learning in single- and multi-agent settings, where the robot's aim is to provide supportive behaviors in human-robot collaboration scenarios.
+	\item \thing{\it User modeling for motivational states within a reinforcement learning framework}{2013 -- 2015}\vspace{0.1em}\\
+	Designed a system for long-term robot companions that employs a model of users' daily motivational states within a reinforcement learning framework.
+	\item \thing{\it Developed a robot for interaction with children in an educational setting}{2012 -- 2014}\vspace{0.1em}\\
+	 Built, assembled, and programmed research robot platform DragonBot for interaction with children. Performed human-robot interaction study at local schools.
+	\end{itemize}
+\item {\bf University of Bristol and the Bristol Robotics Laboratory, Bristol, UK}\\
+	\begin{itemize}\setlength\itemsep{0.8em}\vspace{-1em}
+	\item \thing{\it Master of Engineering ``I Robot, I Think'' Thesis Project}{2011 -- 2012}\vspace{0.1em}\\
+	Applied machine learning techniques to model users' intentions for object handovers in human-robot interaction scenarios.
+	\item \thing{\it ``I Robot... I Learn'' Summer Research Project}{2011}\vspace{-0.1em}\\
+	Implemented a machine learning algorithm for estimating the state of object handovers in human-robot interaction scenarios.
+	\item \thing{\it ``I Robot... and Beyond'' Summer Research Project}{2010}\vspace{-0.1em}\\
+	 Investigated safety and liveness properties rooted in design verification principles for a human-robot interaction system. 
+	\end{itemize}
+\end{itemize}
+
+\section{Work Experience}
+
+\begin{itemize}%\setlength\itemsep{0em}
+
+\item \thing{\bf Research Intern at Uber Advanced Technologies Group, San Francisco, USA}{2017}\\
+        {\bf Deep learning for self-driving car perception team}\vspace{0.5em}\\
+        Worked on the perception module of the self-driving pipeline, where the aim was to detect all targets of interest in the environment of the autonomous vehicle. Researched introducing temporal context into deep learning networks, including the use of multi-frames and recurrent neural networks.
+	
+	{\it Outcome:} Gained experience using large scale deep learning models for detection, and developed research skills relevant to working with region-based convolutional neural networks and recurrent neural networks. Gained experience using the newly released Google Object Detection codebase, TensorFlow, and its associated utilities for working with large datasets (e.g., TFRecords). Worked in a fast-paced team, and collaborated with colleagues to implement novel ideas for the team's deep learning models.
+		
+\item \thing{\bf Student-teacher at Sidney Stringer School, Coventry, UK}{2009}\\
+        {\bf The Student Associates Scheme, UK}\vspace{0.5em}\\
+	Worked within the Mathematics Department as a student-teacher providing help for students during classes, raising students' aspirations for higher education. Produced and delivered presentations and a programming-based project and also delivered a lesson. 
+	
+	{\it Outcome:} Developed communication, presentation and leadership skills, effectively coordinated groups of students and worked together with teachers and other student-teachers in a motivating environment.
+
+%\item \thing{\bf Course Representative, Coventry University, Coventry, UK}{2008 -- 2009}\\
+%	Speaking on behalf of the students to improve communication between lecturers and students and to solve any course-related problems.
+%	
+%	{\it Outcome:} Persuasion and negotiation skills gained from taking part in meetings with lecturers and staff where representing the students’ point of view.
+
+\end{itemize}
+
+\section{Skills}
+\begin{itemize}%\setlength\itemsep{0em}
+\item Programming languages: Python, R, Matlab, Java, C++, HTML, PHP, CSS, LaTeX
+\item Libraries: TensorFlow, NumPy, Brown-UMBC Reinforcement Learning and Planning (BURLAP)
+\item Software/IDEs: Git, PyCharm, Eclipse, Visual Studio, NetBeans, Xcode
+\item Robotics/hardware platforms: Baxter, Keepon, Nao, ROS, YARP, PhaseSpace Motion Capture System
+\end{itemize}
+
+\section{Academic Service and Membership}
+\begin{itemize}%\setlength\itemsep{0em}
+\item Conference and Workshop Committee Leadership
+	\begin{itemize}\setlength\itemsep{0em}
+	\item \thing{International Conference on Intelligent Virtual Agents\\Program Committee Member}{2017}
+	\item \thing{ACM/IEEE International Conference on Human-Robot Interaction\\Program Committee Member}{2017}
+	\item \thing{IEEE/RSJ International Conference on Intelligent Robots and Systems\\Synergies Between Learning and Interaction (SBLI) Workshop\\Program Committee Member}{2017}
+	\item \thing{ACM/IEEE International Conference on Human-Robot Interaction\\Pioneers Workshop Panel Chair}{2017}
+	\end{itemize}
+\item Conference Refereeing service
+	\begin{itemize}\setlength\itemsep{0em}
+	\item \thing{IEEE/RSJ International Conference on Intelligent Robots and Systems}{2017}
+	\item \thing{EEE-RAS International Conference on Humanoid Robots}{2017}
+	\item \thing{IEEE Transactions on Automation Science and Engineering}{2017}
+	\item \thing{IEEE/RSJ International Conference on Intelligent Robots and Systems}{2017}
+	\item \thing{IEEE International Symposium on Robot and Human Interactive Communication}{2016}
+	\item \thing{Elsevier Cognitive Systems Research Journal}{2016}
+	\item \thing{ACM/IEEE International Conference on Human-Robot Interaction}{2015 -- 2016}
+	\item \thing{Affective Computing and Intelligent Interaction}{2015}
+	\item \thing{IEEE/RSJ International Conference on Intelligent Robots and Systems}{2014}
+	\end{itemize}
+\item Membership in Professional Societies
+	\begin{itemize}\setlength\itemsep{0em}
+	\item\thing{ Association for the Advancement of Artificial Intelligence}{2014 -- present}
+	\item \thing{IEEE}{2014 -- present}
+	\item \thing{Cognitive Science Society}{2014 -- present}
+	\end{itemize}
+\item Outreach
+	\begin{itemize}
+	\item \thing{World Science Festival, New York City}{2014}
+	\item \thing{Routine lab tours and open houses, Yale Social Robotics Lab, CT}{2012 -- present}
+	\item \thing{Routine outreach activities involving robot demos at local schools, CT}{2012 -- present}
+	\end{itemize}
+\item Book Reviewing
+	\begin{itemize}
+	\item \thing{{\it Visual Analysis of Behaviour -- From Pixels to Semantics}, by Gong S, Xiang T}{2012}
+	\end{itemize}
+\end{itemize}
+
+\section{Teaching Experience and Mentorship}
+\begin{itemize}\setlength\itemsep{0em}
+\item \thing{Mentoring high-school and undergraduate students on research projects}{2013 -- present}
+\item Teaching Fellow (at Yale University, USA)
+	\begin{itemize}\setlength\itemsep{0em}
+	\item \thing{Mathematical Tools for Computer Science (CPSC 202A)}{2014 -- 2015}
+	\item \thing{Intelligent Robotics (CPSC 473)}{2013 -- 2015}
+	\item \thing{Intelligent Robotics Lab (CPSC 472)}{2013}
+	\end{itemize}
+\item \thing{Point of contact for incoming Romanian students, University of Bristol, UK}{2009 -- 2012}
+\item \thing{Mathematics student-teacher at Sydney Stringer School, Coventry, UK\\Students Associates Scheme}{2009}
+\item \thing{Course Representative, Coventry University, Coventry, UK\\Speaking on behalf of the student body}{2008 -- 2009}
+\end{itemize}
+
+\section{Conferences and Summer Schools Attended}
+\begin{itemize}%\setlength\itemsep{0em}
+\item \thing{Robotics: Science and Systems\\Presented talk for accepted paper}{2017}
+\item \thing{ACM/IEEE International Conference on Human-Robot Interaction (HRI)\\Organized and moderated the Pioneers Workshop Panel}{2016}
+\item \thing{Annual Conference on Neural Information Processing Systems (NIPS)\\Presented talk for workshop full paper}{2016}
+\item \thing{International Conference on Intelligent Virtual Agents (IVA)\\Presented paper for best paper finalist category}{2016}
+\item \thing{International Conference on Social Robotics (ICSR)\\Presented paper for best student paper finalist category}{2016}
+\item \thing{International Conference on Machine Learning (ICML)}{2016}
+\item \thing{International Joint Conference on Artificial Intelligence (IJCAI)}{2016}
+\item \thing{AAAI Fall Symposium Series\\Presented talk for accepted paper}{2015}
+\item \thing{Max Planck Institute for Intelligent Systems Machine Learning Summer School, Germany\\({\bf 20\% acceptance rate})}{2015}
+\item \thing{The International Conference on User Modelling, Adaptation and Personalization (UMAP)\\Presented talk for accepted paper}{2015}
+\item \thing{The ACM/IEEE International Conference on Human-Robot Interaction (HRI)\\Presented talk for accepted paper}{2015}
+\item \thing{The AAAI Conference on Artificial Intelligence (AAAI)\\Presented robot demo}{2014}
+\item \thing{The Cognitive Science Society Annual Conference (CogSci)\\Presented robot demo}{2014}
+\item \thing{The IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)\\Presented talk for accepted paper and invited talk for the DevSor Workshop}{2013}
+\item \thing{The First Summer School on Social Human-Robot Interaction, UK}{2013}
+\item \thing{The Conference Towards Autonomous Robotic Systems (TAROS)\\Presented talk for accepted paper}{2011}
+\end{itemize}
+
+\section{Languages}
+\begin{itemize}%\setlength\itemsep{0em}
+\item Romanian -- native language
+\item English -- fluent: written and spoken
+\item Spanish -- conversational: spoken
+\item French -- basic: written and spoken
+\end{itemize}
+
+\end{document}
