@@ -52,7 +52,7 @@
 % current refsection, minus the actual labelnumber, plus one
 \DeclareFieldFormat{labelnumber}{\mkbibdesc{#1}}    
 \newrobustcmd*{\mkbibdesc}[1]{%
-  \number\numexpr\csuse{entrycount:\therefsection}-#1\relax}
+  \number\numexpr\csuse{entrycount:\therefsection}-1-#1\relax}
 
 \bibliography{CV.bib}
 
@@ -91,9 +91,13 @@
 \maketitle
 \thispagestyle{fancy}
 
-Yale University, Department of Computer Science \hfill Ph.D. Candidate, Yale University\\
-51 Prospect Street, Office 505 \hfill \href{mailto:elena.corina.grigore@yale.edu}{elena.corina.grigore@yale.edu}\\
-New Haven, CT, 06511 USA \hfill \href{http://elenacorinagrigore.com}{elenacorinagrigore.com}
+%Yale University, Department of Computer Science \hfill Ph.D. Candidate, Yale University\\
+%51 Prospect Street, Office 505 \hfill \href{mailto:elena.corina.grigore@yale.edu}{elena.corina.grigore@yale.edu}\\
+%New Haven, CT, 06511 USA \hfill \href{http://elenacorinagrigore.com}{elenacorinagrigore.com}
+
+nuTonomy c/o Elena Corina Grigore \hfill Research Scientist, nuTonomy\\
+100 Northern Ave, 2nd floor \hfill \href{mailto:elena.corina.grigore@nutonomy.com}{elena.corina.grigore@nutonomy.com}\\
+Boston, MA 02210, USA \hfill \href{http://elenacorinagrigore.com}{elenacorinagrigore.com}
 
 \vspace{-0.5em}
 \section{Research Interests}
@@ -104,7 +108,7 @@ Robotics, machine learning, artificial intelligence, human-robot collaboration, 
 \section{Education}
 \vspace{-0.5em}
 \begin{itemize}%\setlength\itemsep{0em}
-\item \thing{\bf Doctor of Philosophy, Computer Science, Yale University, USA}{2012 -- present}\\
+\item \thing{\bf Doctor of Philosophy, Computer Science, Yale University, USA}{2018}\\
 	Advisor: Brian Scassellati\\
 	Area of study: Learning Supportive Behaviors for Adaptive Robots \\
 	\hphantom{Area of study:} in Human-Robot Collaboration
@@ -127,9 +131,11 @@ Robotics, machine learning, artificial intelligence, human-robot collaboration, 
 \vspace{-1.8em}
 \section{Recent Work}
 \begin{itemize}%\setlength\itemsep{0em}
-\item \thing{\bf Research Intern at Uber Advanced Technologies Group, San Francisco, USA}{2017}\\
+\item \thing{\bf Research Scientist at nuTonomy, Boston, MA, USA}{2018 -- present}\\
+      	Working on the Behavioral Modeling team, applying machine learning techniques (including deep learning) to model and predict the trajectories and intentions of all the agents of interest in the environment of a self-driving car
+\item \thing{\bf Research Intern at Uber Advanced Technologies Group, San Francisco, CA, USA}{2017}\\
       	Integrating temporal context into deep learning networks for self-driving car perception 
-\item \thing{\bf Ongoing Dissertation Work}{2017}\\
+\item \thing{\bf Recent Dissertation Work, Yale University, New Haven, CT, USA}{2017}\\
 	Learning task and user preference models in human-robot collaboration for predicting \\ useful supportive behaviors, tailored to a human peer \cite{grigore2018predict_supportive}, \cite{grigore2018pref_assistance}
 	%Learning high-level activities during a human-robot collaboration task for predicting features \\ that prompt the robot to provide assistance \cite{grigore2017learn_activities}
 \end{itemize}
@@ -170,14 +176,15 @@ Robotics, machine learning, artificial intelligence, human-robot collaboration, 
 \end{itemize}
 
 
-\section{Thesis}
-\printbibliography[heading=none,keyword=thesis,omitnumbers=true,prefixnumbers={Master's Thesis}]
+\section{Theses}
+\printbibliography[heading=none,keyword=phd_thesis,omitnumbers=true,prefixnumbers={Ph.D. Thesis}]
+\printbibliography[heading=none,keyword=ma_thesis,omitnumbers=true,prefixnumbers={Master's Thesis}]
 
 \section{Research Experience}
 \begin{itemize}%\setlength\itemsep{1em}
-\item {\bf Yale University, Social Robotics Laboratory, CT, USA}\\
+\item {\bf Yale University, Social Robotics Laboratory, New Haven, CT, USA}\\
 	\begin{itemize}\setlength\itemsep{0.8em}\vspace{-1em}
-	\item \thing{\it Learning Supportive Behaviors for Adaptive Robots \\ in Human-Robot Collaboration}{2014 -- present}\vspace{0.1em}\\
+	\item \thing{\it Learning Supportive Behaviors for Adaptive Robots \\ in Human-Robot Collaboration}{2014 -- 2018}\vspace{0.1em}\\
 	Applying machine learning techniques to endow robots with learning capabilities needed when placed in new environments or faced with new tasks. This includes learning about the structure and progression of a physical task, as well as about the actions human workers perform during this task. Investigating techniques including Hidden Markov Models and reinforcement learning in single- and multi-agent settings, where the robot's aim is to provide supportive behaviors in human-robot collaboration scenarios.
 	\item \thing{\it User modeling for motivational states within a reinforcement learning framework}{2013 -- 2015}\vspace{0.1em}\\
 	Designed a system for long-term robot companions that employs a model of users' daily motivational states within a reinforcement learning framework.
@@ -199,6 +206,12 @@ Robotics, machine learning, artificial intelligence, human-robot collaboration, 
 
 \begin{itemize}%\setlength\itemsep{0em}
 
+\item \thing{\bf Research Scientist at nuTonomy, Boston, USA}{2018 -- present}\\
+	{\bf Behavior Modeling team}\vspace{0.5em}\\
+      	Working as part of the Behavioral Modeling team, focusing on the agents of interest present in the self-driving car's environment (e.g., vehicles, bicyclists, pedestrians, etc.). Applying machine learning techniques (including deep learning) to model and predict the trajectories and intentions of such agents.
+	
+	{\it Outcome:} Utilizing and expanding my research skills to create and build models of how agents behave on the road. Applying large-scale deep learning models (including recurrent neural networks) to real-world, large datasets involving temporal data. Gaining and solidifying knowledge in using PyTorch, being part of the full process of creating and deploying deep learning models. Working in a dynamic and fast-paced team with strong collaboration practices, as well as working with other teams to understand data constraints and establish interfacing between modules.
+	
 \item \thing{\bf Research Intern at Uber Advanced Technologies Group, San Francisco, USA}{2017}\\
         {\bf Deep learning for self-driving car perception team}\vspace{0.5em}\\
         Worked on the perception module of the self-driving pipeline, where the aim was to detect all targets of interest in the environment of the autonomous vehicle. Researched introducing temporal context into deep learning networks, including the use of multi-frames and recurrent neural networks.
@@ -221,7 +234,7 @@ Robotics, machine learning, artificial intelligence, human-robot collaboration, 
 \section{Skills}
 \begin{itemize}%\setlength\itemsep{0em}
 \item Programming languages: Python, R, Matlab, Java, C++, HTML, PHP, CSS, LaTeX
-\item Libraries: TensorFlow, NumPy, Brown-UMBC Reinforcement Learning and Planning (BURLAP)
+\item Libraries: PyTorch, TensorFlow, NumPy, Brown-UMBC Reinforcement Learning and Planning (BURLAP)
 \item Software/IDEs: Git, PyCharm, Eclipse, Visual Studio, NetBeans, Xcode
 \item Robotics/hardware platforms: Baxter, Keepon, Nao, ROS, YARP, PhaseSpace Motion Capture System
 \end{itemize}
@@ -237,15 +250,19 @@ Robotics, machine learning, artificial intelligence, human-robot collaboration, 
 	\end{itemize}
 \item Conference Refereeing service
 	\begin{itemize}\setlength\itemsep{0em}
-	\item \thing{IEEE/RSJ International Conference on Intelligent Robots and Systems}{2017}
+	\item \thing{International Conference on Machine Learning}{2019}
+	\item \thing{ACM/IEEE International Conference on Human-Robot Interaction}{2015 -- 2019}
+	\item \thing{IEEE/RSJ International Conference on Robotics and Automation}{2018}
+	\item \thing{Springer International Journal of Social Robotics}{2018}
+	\item \thing{IEEE/RSJ International Conference on Intelligent Robots and Systems}{2014, 2017 -- 2018}
+	\item \thing{ACM/IEEE Interaction Design and Children Conference}{2018}
 	\item \thing{EEE-RAS International Conference on Humanoid Robots}{2017}
 	\item \thing{IEEE Transactions on Automation Science and Engineering}{2017}
 	\item \thing{IEEE/RSJ International Conference on Intelligent Robots and Systems}{2017}
+	\item \thing{International Conference on Social Robotics}{2016}
 	\item \thing{IEEE International Symposium on Robot and Human Interactive Communication}{2016}
 	\item \thing{Elsevier Cognitive Systems Research Journal}{2016}
-	\item \thing{ACM/IEEE International Conference on Human-Robot Interaction}{2015 -- 2016}
 	\item \thing{Affective Computing and Intelligent Interaction}{2015}
-	\item \thing{IEEE/RSJ International Conference on Intelligent Robots and Systems}{2014}
 	\end{itemize}
 \item Membership in Professional Societies
 	\begin{itemize}\setlength\itemsep{0em}
@@ -282,7 +299,9 @@ Robotics, machine learning, artificial intelligence, human-robot collaboration, 
 
 \section{Conferences and Summer Schools Attended}
 \begin{itemize}%\setlength\itemsep{0em}
-\item \thing{Robotics: Science and Systems\\Presented talk for accepted paper}{2017}
+\item \thing{IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)\\Presented talk for accepted paper}{2018}
+\item \thing{International Conference on Autonomous Agents and Multiagent Systems (AAMAS)\\Presented talk for accepted paper}{2018}
+\item \thing{Robotics: Science and Systems\\Presented talk for accepted paper (RSS)}{2017}
 \item \thing{ACM/IEEE International Conference on Human-Robot Interaction (HRI)\\Organized and moderated the Pioneers Workshop Panel}{2016}
 \item \thing{Annual Conference on Neural Information Processing Systems (NIPS)\\Presented talk for workshop full paper}{2016}
 \item \thing{International Conference on Intelligent Virtual Agents (IVA)\\Presented paper for best paper finalist category}{2016}
@@ -291,13 +310,13 @@ Robotics, machine learning, artificial intelligence, human-robot collaboration, 
 \item \thing{International Joint Conference on Artificial Intelligence (IJCAI)}{2016}
 \item \thing{AAAI Fall Symposium Series\\Presented talk for accepted paper}{2015}
 \item \thing{Max Planck Institute for Intelligent Systems Machine Learning Summer School, Germany\\({\bf 20\% acceptance rate})}{2015}
-\item \thing{The International Conference on User Modelling, Adaptation and Personalization (UMAP)\\Presented talk for accepted paper}{2015}
-\item \thing{The ACM/IEEE International Conference on Human-Robot Interaction (HRI)\\Presented talk for accepted paper}{2015}
-\item \thing{The AAAI Conference on Artificial Intelligence (AAAI)\\Presented robot demo}{2014}
-\item \thing{The Cognitive Science Society Annual Conference (CogSci)\\Presented robot demo}{2014}
-\item \thing{The IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)\\Presented talk for accepted paper and invited talk for the DevSor Workshop}{2013}
+\item \thing{International Conference on User Modelling, Adaptation and Personalization (UMAP)\\Presented talk for accepted paper}{2015}
+\item \thing{ACM/IEEE International Conference on Human-Robot Interaction (HRI)\\Presented talk for accepted paper}{2015}
+\item \thing{AAAI Conference on Artificial Intelligence (AAAI)\\Presented robot demo}{2014}
+\item \thing{Cognitive Science Society Annual Conference (CogSci)\\Presented robot demo}{2014}
+\item \thing{IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)\\Presented talk for accepted paper and invited talk for the DevSor Workshop}{2013}
 \item \thing{The First Summer School on Social Human-Robot Interaction, UK}{2013}
-\item \thing{The Conference Towards Autonomous Robotic Systems (TAROS)\\Presented talk for accepted paper}{2011}
+\item \thing{Conference Towards Autonomous Robotic Systems (TAROS)\\Presented talk for accepted paper}{2011}
 \end{itemize}
 
 \section{Languages}
