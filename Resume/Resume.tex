@@ -1,0 +1,208 @@
+\documentclass[10pt,letterpaper]{article}
+
+% packages
+\usepackage{nopageno}
+\usepackage[top=1in, bottom=1in, left=1in, right=1in]{geometry}
+\usepackage[bookmarks=false,hidelinks]{hyperref}
+\usepackage{titlesec}
+\usepackage{lastpage}
+\usepackage{fancyhdr}
+\usepackage[usenames,dvipsnames]{xcolor} % colours
+\usepackage[inline]{enumitem} % inline lists
+\usepackage[backend=bibtex,style=ieee,sorting=ydnt,doi=false,isbn=false,url=false,defernumbers=true]{biblatex}
+\usepackage[romanian]{babel}
+\usepackage{combelow}
+\usepackage{lipsum}
+\usepackage{hyperref}
+
+%-----------------------
+
+
+\usepackage{xpatch}% or use http://tex.stackexchange.com/a/40705
+
+\newbibmacro*{name:bold}[2]{%
+  \def\do##1{\ifstrequal{#1, #2}{##1}{\bfseries\listbreak}{}}%
+  \dolistloop{\boldnames}}
+\newcommand*{\boldnames}{}
+
+\xpretobibmacro{name:last}{\begingroup\usebibmacro{name:bold}{#1}{#2}}{}{}
+\xpretobibmacro{name:first-last}{\begingroup\usebibmacro{name:bold}{#1}{#2}}{}{}
+\xpretobibmacro{name:last-first}{\begingroup\usebibmacro{name:bold}{#1}{#2}}{}{}
+\xpretobibmacro{name:delim}{\begingroup\normalfont}{}{}
+
+\xapptobibmacro{name:last}{\endgroup}{}{}
+\xapptobibmacro{name:first-last}{\endgroup}{}{}
+\xapptobibmacro{name:last-first}{\endgroup}{}{}
+\xapptobibmacro{name:delim}{\endgroup}{}{}
+
+% just for demonstration
+\ExecuteBibliographyOptions{maxnames=99,firstinits}
+
+\forcsvlist{\listadd\boldnames}
+  {{Grigore, Elena~Corina}, {Grigore, E.~C.}, {Grigore, Elena\bibnamedelima Corina},
+   {Grigore, E\bibinitperiod\bibinitdelim C\bibinitperiod}}
+
+%-----------------------
+
+% Count total number of entries in each refsection
+\AtDataInput{%
+  \csnumgdef{entrycount:\therefsection}{%
+    \csuse{entrycount:\therefsection}+1}}
+
+% Print the labelnumber as the total number of entries in the
+% current refsection, minus the actual labelnumber, plus one
+\DeclareFieldFormat{labelnumber}{\mkbibdesc{#1}}    
+\newrobustcmd*{\mkbibdesc}[1]{%
+  \number\numexpr\csuse{entrycount:\therefsection}-1-#1\relax}
+
+\bibliography{Resume.bib}
+
+% customizations
+%\titleformat{\section}{\Large\uppercase}{\thesection}{1em}{} % modify section format
+%\titlespacing{\section}{0em}{1.2em}{1em}
+
+% custom commands
+\newcommand{\vx}{\texorpdfstring{$\vert$}{\textbar}~} % vertical bar; added textorpdfstring due to warning
+%\newcommand{\bx}{\texorpdfstring{$\bullet$}{.}~} % bullet
+\newcommand{\thing}[2]{{#1} \hfill {#2}}
+\renewcommand{\labelitemii}{$\circ$} % replace second-level lists (ii) with hollow circle
+
+% page setup
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot[R]{\textcolor{gray}{Page \thepage\ of \pageref{LastPage}}}
+\renewcommand{\headrulewidth}{0pt}
+\setcounter{secnumdepth}{0} % suppress section numbering
+\setlength\parindent{0pt} % no indent
+
+%title
+\title{\vspace{-5em}
+	\Huge{\textsc{Elena Corina Grigore}}
+	\vspace{-0.5em}
+	\\\noindent\rule{\linewidth}{0.5pt}
+	\vspace{-2.5em}
+	\\\noindent\rule{\linewidth}{0.5pt}
+	\vspace{-3.2em}
+}
+%\author{}
+\date{}
+
+\begin{document}
+
+\maketitle
+\thispagestyle{fancy}
+
+%Yale University, Department of Computer Science \hfill Ph.D. Candidate, Yale University\\
+%51 Prospect Street, Office 505 \hfill \href{mailto:elena.corina.grigore@yale.edu}{elena.corina.grigore@yale.edu}\\
+%New Haven, CT, 06511 USA \hfill \href{http://elenacorinagrigore.com}{elenacorinagrigore.com}
+
+%nuTonomy c/o Elena Corina Grigore \hfill Research Scientist, nuTonomy\\
+%100 Northern Ave, 2nd floor \hfill \href{mailto:elena.corina.grigore@nutonomy.com}{elena.corina.grigore@nutonomy.com}\\
+%Boston, MA 02210, USA \hfill \href{http://elenacorinagrigore.com}{elenacorinagrigore.com}
+
+Senior Research Scientist, Motional (formerly nuTonomy) \hfill \href{mailto:elena.corina.grigore@aya.yale.edu}{elena.corina.grigore@aya.yale.edu}\\
+Boston, MA, USA \hfill \href{http://elenacorinagrigore.com}{elenacorinagrigore.com}
+
+\vspace{-0.5em}
+\section{Research Interests}
+\vspace{-0.5em}
+Robotics, autonomous driving, machine learning, deep learning, artificial intelligence, adaptive systems.
+	
+\vspace{-1em}
+\section{Work Experience}
+
+\begin{itemize}%\setlength\itemsep{0em}
+
+%\item \thing{\bf Research Scientist at nuTonomy, Boston, USA}{2018 -- present}\\
+\item \thing{\bf Senior Research Scientist at Motional, Boston, MA, USA}{2020 -- present}\\
+ 	{\bf Research Scientist at Motional, Boston, MA, USA}\hfill{2018  --  \hspace{2.8mm} 2020}\vspace{0.5em}\\
+	{\bf Prediction and Behavior Modeling team}\vspace{0.5em}\\
+      	%Working on the Prediction and Behavior Modeling team, focusing on road actors present in the environment of the autonomous vehicle (e.g., vehicles, bicyclists, pedestrians, etc.). Applying machine learning techniques (notably, deep learning) to model and predict the trajectories and intentions of such agents.
+      	Working on the Prediction and Behavior Modeling team, applying machine learning techniques (notably, deep learning) to model and predict the trajectories and intentions of all the agents of interest in the environment of a self-driving vehicle~\cite{grigore2020covernet}, \cite{grigore2020self_driving_domain_knowledge}.
+	
+	{\it Outcome:} Utilizing and expanding my research skills to develop models of how agents behave on the road, and to publish state-of-the-art solutions to top machine learning conferences. Applying large-scale deep learning models to real-world, large datasets involving temporal data. Utilizing my knowledge of Python and PyTorch, being part of the full process of creating and deploying deep learning models. Working in a dynamic and fast-paced team with strong collaboration practices, as well as working with other teams to understand data constraints and establish interfacing between modules.
+	
+\item \thing{\bf Research Intern at Uber Advanced Technologies Group, San Francisco, USA}{2017}\\
+        {\bf Deep learning for self-driving car perception team}\vspace{0.5em}\\
+        Worked on the perception module of the self-driving pipeline, where the aim was to detect all targets of interest in the environment of the autonomous vehicle. Researched introducing temporal context into deep learning networks, including the use of multi-frames and recurrent neural networks.
+	
+	{\it Outcome:} Gained experience using large scale deep learning models for detection, and developed research skills relevant to working with region-based convolutional neural networks and recurrent neural networks. Gained experience using the Google Object Detection codebase, TensorFlow, and its associated utilities for working with large datasets (e.g., TFRecords). Worked in a fast-paced team, and collaborated with colleagues to implement novel ideas for the team's deep learning models.
+
+\end{itemize}
+
+\vspace{-1.8em}
+\section{Education}
+\vspace{-0.5em}
+\begin{itemize}%\setlength\itemsep{0em}
+\item \thing{\bf Doctor of Philosophy, Computer Science, Yale University, USA}{2018}\\
+	Advisor: Brian Scassellati\\
+	Ph.D. Thesis: Learning Supportive Behaviors for Adaptive Robots \\
+	\hphantom{Area of study:} in Human-Robot Collaboration \\
+	Available at: \href{https://scazlab.yale.edu/sites/default/files/files/corina_dissertation.pdf}{\url{https://scazlab.yale.edu/sites/default/files/files/corina_dissertation.pdf}}
+	%Learning task and user preference models in human-robot collaboration for predicting \\ 
+	%useful supportive behaviors, tailored to a human peer~\cite{grigore2018pref_assistance}, \cite{grigore2018predict_supportive}
+	
+	Applying machine learning techniques to endow robots with learning capabilities needed when placed in new environments or faced with new tasks. This includes learning about the structure and progression of a physical task, as well as about the actions human workers perform during this task. Investigating techniques including Hidden Markov Models and reinforcement learning in single- and multi-agent settings, where the robot's aim is to provide supportive behaviors in human-robot collaboration scenarios~\cite{grigore2018pref_assistance}, \cite{grigore2017granularity}, \cite{grigore2016hmarl}.
+
+\item \thing{\bf Master of Philosophy, Computer Science, Yale University, USA}{2015}
+\item \thing{\bf Master of Science, Computer Science, Yale University, USA}{2015}
+\item \thing{\bf Master of Engineering with Study Abroad\\Computer Science, University of Bristol, UK}{2012}\\
+	Advisors: Kerstin Eder (University of Bristol, UK)\\
+	\hphantom{Advisors:} Anthony G. Pipe (Bristol Robotics Laboratory, UK)\\
+	\hphantom{Advisors:} Christopher Melhuish (Bristol Robotics Laboratory, UK)\\
+	Master's Thesis: {\it ``I Robot, I Think''}\\
+	Applied machine learning techniques to model users' intentions for object handovers in human-
+robot interaction scenarios~\cite{grigore2013joint}.
+
+	4-year program encompassing my Bachelor's degree\\
+	Study Abroad at University of California, San Diego (2010/2011)\\
+	Master of Engineering with First Class Honors
+
+
+\end{itemize}
+
+\vspace{-1.1em}
+\section{Selected Publications}
+\vspace{-0.5em}
+\nocite{*} % print without citations, * for all
+\setlength{\biblabelsep}{0.5em} % separation between number and text
+\printbibliography[heading=none,keyword=publication]
+
+%\newpage
+\vspace{-1.2em}
+\section{Honors and Awards}
+\vspace{-0.5em}
+\begin{itemize}%\setlength\itemsep{0em}
+\item \thing{\bf Best Paper Finalist, Intelligent Virtual Agents (IVA)}{2016}\\
+	``Verbal Communication Improves Perceptions of Friendship and Social Presence \\
+	 in Human-Robot Interaction''
+\item \thing{\bf Best Student Paper Finalist, International Conference on Social Robotics (ICSR)}{2016}\\
+	``Comparing Ways to Trigger Migration between a Robot
+	 and a Virtually Embodied Character''
+\item \thing{\bf Human-Robot Interaction (HRI) Pioneer}{2016}\\
+	 Highly selective workshop that seeks to foster creativity and collaboration across HRI
+\item \thing{\bf Tocher Fellowship, Yale University, USA}{2014 -- 2015}
+\item \thing{\bf Engineering and Physical Sciences Research Council Fellowship, UK}{2010, 2011}\\
+	Summer Research Projects at the Bristol Robotics Lab, Bristol, UK
+\item \thing{\bf Head of Promotion Honorary Prize (Valedictorian),\\Piatra Neam\cb{t} Computer Science High School, Romania}{2008}
+\end{itemize}
+
+%\section{Invited Talks}
+%
+%\begin{itemize}%\setlength\itemsep{0em}
+%
+%\item \thing{Virtual Assistant Summit, San Francisco, CA \\ \it Can You Lend Me a Hand? Helpers of the Future}{2017}
+%\item \thing{STEM Coffee Hour Facilitator, Cheshire, CT \\ \it How is AI Shaping Robotics?}{2017}
+%\item \thing{IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS) \\ International Workshop on Developmental Social Robotics (DevSor), Tokyo \\ \it Feasibility of SAR Approaches? Helping Children with Learning Tasks}{2013}
+%
+%\end{itemize}
+%
+%\section{Skills}
+%\begin{itemize}%\setlength\itemsep{0em}
+%\item Programming languages: Python, R, Matlab, Java, C++, HTML, PHP, CSS, LaTeX
+%\item Libraries: PyTorch, TensorFlow, NumPy, Brown-UMBC Reinforcement Learning and Planning (BURLAP)
+%\item Software/IDEs: Git, PyCharm, Eclipse, Visual Studio, NetBeans, Xcode
+%\item Robotics/hardware platforms: Baxter, Keepon, Nao, ROS, YARP, PhaseSpace Motion Capture System
+%\end{itemize}
+
+\end{document}
